@@ -1,10 +1,15 @@
 import React from "react";
-
+import NavBar from './Navigation/NavBar'
+import './../config/styles.scss'
+import { BrowserRouter as Router, Switch, Route, BrowserRouter } from "react-router-dom";
 const App = () => {
+    
     return (
-        <div>
-            <h1>App</h1>
-        </div>
+        <>
+        <Router>
+            <NavBar pageType="bao_dang/homepage"/>
+        </Router>
+        </>
     );
 };
 

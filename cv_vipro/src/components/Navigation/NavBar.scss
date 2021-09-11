@@ -1,0 +1,16 @@
+@import "./../../config/variable.scss";
+.navigation {
+  width: 100%;
+  background-color: $dark_purple;
+  color: $tiles_background;
+  height: 65px;
+  display: block;
+  h1 {
+    font-size: 24px;
+    margin-left: 100px;
+    padding-top: 16px;
+  }
+  .navigation-item {
+    color: $tiles_background;
+  }
+}
