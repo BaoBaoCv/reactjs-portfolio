@@ -1,11 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import colors from "../../config/colors";
 import "./NavBar.scss";
 import HamburgerMenuItem from "./HamburgerMenuItem";
 
 const Nav = ({pageType}) => {
-  
+  const orange = "#FF702F"
 
   return (
     <nav className="navigation navbar navbar-inverse fixed-top">
@@ -21,10 +20,13 @@ const Nav = ({pageType}) => {
         <div className="collapse navbar-collapse" id = "navmenu">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="navigation-item"> ok</Link>
+              <HamburgerMenuItem pageTitle="HOME" shortDescription="LANDING PAGES, TIMELINE, INTERACTIVE" pageTitleColor={"#FF702F"} imagePath="assets/Menu_item1.svg"/>
             </li>
             <li className="nav-item">
-              <HamburgerMenuItem pageTitle="Profile" shortDescription="short description here"/>
+              <HamburgerMenuItem pageTitle="PROJECT LIST" shortDescription="PROJECT LIST IN SHORT AND NARROW VIEW" pageTitleColor={orange}/>
+            </li>
+            <li className="nav-item">
+              <HamburgerMenuItem pageTitle="PROFILE" shortDescription="ABOUT, RESUME, AND INFO" pageTitleColor={orange}/>
             </li>
           </ul>
         </div>

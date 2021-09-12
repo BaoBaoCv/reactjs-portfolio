@@ -1,4 +1,7 @@
+@import "variable.scss";
+
 body,
 html {
-  font-family: "Roboto Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: $dark_background;
 }
