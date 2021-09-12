@@ -11,16 +11,14 @@
   }
   .navbar-collapse {
     position: fixed;
-    top: 56px; /* adjust to height of navbar */
+    top: $navbar_height; /* adjust to height of navbar */
     right: 0;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
-    width: 30%;
     height: 100%;
     background-color: $dark_sub;
     text-align: center;
-    margin-left: 1344px !important;
   }
 
   .navbar-collapse.collapsing {
