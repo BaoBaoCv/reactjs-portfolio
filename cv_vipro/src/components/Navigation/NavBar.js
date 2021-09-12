@@ -15,7 +15,7 @@ const Nav = ({pageType}) => {
         </Link>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <img src={require('./../../assets/Shape.svg')} className="navbar-toggler-icon"></img>
+          <img src={"/assets/Shape.svg"} className="navbar-toggler-icon"></img>
         </button>
 
         <div className="collapse navbar-collapse" id = "navmenu">
