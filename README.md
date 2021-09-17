@@ -33,13 +33,41 @@
 
 ### files named "index.\*" used to export all other files in that same folder
 
--   src
-    -   assets
-        -   images: all images are stored here
-        -   styles
+-   /src
+    -   /assets
+        -   /images: all images are stored here
+        -   /styles
             -   \_\_mixins.scss: all resused styles stored here
             -   \_\_variable.scss: all styling variables stored here
-    -   configs: stores all high level config for application
+    -   /configs: stores all high level config for application
         -   routes: stores routes for setting up router
-    -   constants: store all constants for app (rarely use)
-    -   mock: store mock data for project
+    -   /constants: store all constants for app (rarely use)
+    -   /mock: store mock data for project
+    -   /components
+        -   /commons
+        -   /pages
+            -   /home
+            -   /profile
+            -   /project-list
+
+# Naming convention
+
+## Tên file
+
+-   tên folder: viết thường cách bằng dấu cách (vd: project-list)
+-   tên component: camelCase viết in chữ đầu
+-   tên scss: như tên folder
+
+## Tên variable
+
+-   tên scss variable: như tên folder
+-   tên js variable: camelCase như Java
+
+## Tên class css
+
+-   ví dụ: "home**intro-title" or "home-page**intro-title-name"
+
+## Tên data trong src/mock/userData.js
+
+-   đặt tên theo \[componentDeatail\] (component là cái component sử dụng nó deatail là cái tên m muốn đặt gì cũng đc)
+    vd(timelineProjects)
