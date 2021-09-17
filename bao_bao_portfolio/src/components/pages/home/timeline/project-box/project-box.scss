@@ -1,0 +1,34 @@
+@import "@/assets/styles/index.scss";
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 464px;
+    &__bottom {
+        display: flex;
+        margin-top: 37px;
+        &-description {
+            text-transform: uppercase;
+        }
+        &-role {
+            text-transform: uppercase;
+        }
+        &-detail {
+            font-weight: 500;
+            color: #fff;
+            width: 80%;
+        }
+        &-company {
+            margin: 17px 0;
+            font-weight: 600;
+            font-size: 36px;
+            color: $dark_green;
+            text-transform: capitalize;
+        }
+        &-icon {
+            margin-top: 30px;
+            width: 100px;
+            height: 110px;
+        }
+    }
+}

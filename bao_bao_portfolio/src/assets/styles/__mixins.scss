@@ -1,0 +1,7 @@
+@mixin card-box {
+    background-image: url("@/assets/images/card-background.png");
+    background-color: rgba(36, 36, 47, 0.5);
+    border: 2px solid $dark_sub;
+    box-sizing: border-box;
+    border-radius: 12px;
+}

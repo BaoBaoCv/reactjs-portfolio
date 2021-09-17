@@ -1,0 +1,19 @@
+@import "bootstrap/scss/bootstrap";
+@import "@/assets/styles/index.scss";
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: $background;
+
+    font-family: "IBM Plex Mono", monospace;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+}
+
+.app {
+    color: white;
+    // min-height: $screen_height;
+}

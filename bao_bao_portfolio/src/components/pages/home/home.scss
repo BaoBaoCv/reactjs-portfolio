@@ -1,0 +1,12 @@
+@import "@/assets/styles/index.scss";
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: $main_component_margin;
+    // height: $screen_height;
+    &__content {
+        color: $title-color;
+    }
+}

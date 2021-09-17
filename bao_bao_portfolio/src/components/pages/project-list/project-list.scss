@@ -1,0 +1,13 @@
+@import "@/assets/styles/index.scss";
+
+.projectList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: $main_component_margin;
+    height: $screen_height;
+    border: 1px solid #ffff;
+    &__content {
+        color: $title-color;
+    }
+}

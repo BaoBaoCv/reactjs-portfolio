@@ -7,7 +7,7 @@ const Nav = ({pageType}) => {
   const orange = "#FF702F"
 
   return (
-    <nav className="navigation navbar fixed-top">
+    <ac className="navigation navbar fixed-top">
       <div className="container">
         <Link className="navigation-item navbar-brand" to="/">
             <h1>{pageType}</h1>

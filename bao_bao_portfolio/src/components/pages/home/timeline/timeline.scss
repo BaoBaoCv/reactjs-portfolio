@@ -1,0 +1,112 @@
+@use "sass:math";
+@import "@/assets/styles/index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+
+$timeline-icon-size: 16px;
+$timeline-line-width: 3px;
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    // width: 80vw;
+    color: $title-color;
+    &__subtitle {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100vw;
+        padding-left: 150px;
+        margin-bottom: 20px;
+        &-year {
+            color: $dark_green;
+            font-weight: 600;
+        }
+        &-line {
+            width: 167px;
+            background-color: $dark_green;
+            height: 2px;
+            margin: 0 16px;
+        }
+    }
+    &__title {
+        // border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200vw;
+        margin-bottom: 80px;
+
+        color: $dark_green;
+        font-family: Manrope;
+        font-weight: 200;
+        font-size: 196px;
+        line-height: 140px;
+
+        text-transform: uppercase;
+    }
+    &__date {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -3px;
+        left: -70px;
+
+        font-weight: 600;
+        &-year {
+            margin-bottom: 20px;
+            color: #9b51e0;
+        }
+
+        &-month {
+            color: $dark_green;
+        }
+        .hidden {
+            display: none;
+        }
+    }
+    .vertical-timeline-element-icon {
+        $position-top: math.div(40 - $timeline-icon-size, 2);
+        top: $position-top;
+        left: $position-top - math.div(4 - $timeline-line-width, 2);
+        width: $timeline-icon-size;
+        height: $timeline-icon-size;
+        background-color: #9c80ea;
+        box-shadow: none;
+    }
+    .vertical-timeline::before {
+        width: $timeline-line-width;
+        background: $timeline-color;
+    }
+    .vertical-timeline-element {
+        margin: -220px 0;
+    }
+    .vertical-timeline-element-content {
+        background: transparent;
+        box-shadow: none;
+    }
+    .vertical-timeline-element-content-arrow {
+        display: none;
+    }
+    .row {
+        width: 80vw;
+    }
+
+    &__character {
+        position: relative;
+        &-left {
+            position: absolute;
+            top: 200px;
+            left: -80px;
+        }
+        &-center {
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+    }
+}

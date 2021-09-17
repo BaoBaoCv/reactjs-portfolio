@@ -1,0 +1,14 @@
+@import "@/assets/styles/index.scss";
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 600px;
+    width: 90%;
+    border-bottom: 1px dashed #c5b89f;
+    &__content {
+        color: $title-color;
+    }
+}
