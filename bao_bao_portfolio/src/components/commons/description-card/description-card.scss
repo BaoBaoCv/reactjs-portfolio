@@ -1,0 +1,19 @@
+@import "@/assets/styles/index.scss";
+
+.description-card {
+    @include card-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 40px;
+    font-weight: 600;
+    &__title {
+        color: $dark-green;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    &__description {
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+}
