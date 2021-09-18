@@ -5,7 +5,9 @@ const ProjectCard = ({ project }) => {
         <div className="project-card">
             <div className="project-card__tags">
                 {project.tags.map((tag) => (
-                    <div className="project-card__tags-detail">{tag}</div>
+                    <div key={tag} className="project-card__tags-detail">
+                        {tag}
+                    </div>
                 ))}
             </div>
             <div className="project-card__img"></div>

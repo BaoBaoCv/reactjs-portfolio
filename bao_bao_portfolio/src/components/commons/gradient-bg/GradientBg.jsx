@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { getRndInteger } from "@/constants";
 import "./gradient-bg.scss";
 
 const gradientBgs = [
@@ -10,10 +11,6 @@ const gradientBgs = [
 const getWindowDimensions = () => {
     const { innerWidth, innerHeight } = window;
     return { width: innerWidth, height: innerHeight };
-};
-
-const getRndInteger = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 const genGradientDots = (fullPageHeight, windowHeight) => {
