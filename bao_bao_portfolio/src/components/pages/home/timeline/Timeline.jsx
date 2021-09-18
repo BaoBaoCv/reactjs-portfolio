@@ -6,20 +6,13 @@ import {
 import { Col, Image, Row } from "react-bootstrap";
 
 import ProjectBox from "./project-box/ProjectBox";
-import img1 from "@/assets/images/character1.svg";
-import img2 from "@/assets/images/character2.svg";
-import img3 from "@/assets/images/character3.svg";
+import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
 import { user } from "@/mock";
 
 import "./timeline.scss";
 import "react-vertical-timeline-component/style.min.css";
 
-const getRndInteger = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
 const Timeline = () => {
-    const imgs = [img1, img2, img3];
     const charaPostions = [
         "timeline__character-left",
         "timeline__character-center",
@@ -39,6 +32,7 @@ const Timeline = () => {
             <VerticalTimeline animate={true} layout="1-column-left">
                 {user.timelineProjects.map((project, index) => (
                     <VerticalTimelineElement
+                        key={project.name}
                         iconStyle={
                             project.isYearHidden
                                 ? {
@@ -86,7 +80,12 @@ const Timeline = () => {
                                         ]
                                     }
                                     src={
-                                        imgs[getRndInteger(0, imgs.length - 1)]
+                                        CHARACTER_IMAGES[
+                                            getRndInteger(
+                                                0,
+                                                CHARACTER_IMAGES.length - 1
+                                            )
+                                        ]
                                     }
                                 />
                             </Col>

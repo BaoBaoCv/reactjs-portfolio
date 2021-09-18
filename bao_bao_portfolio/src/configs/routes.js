@@ -1,5 +1,6 @@
 import { PAGE_NAMES, ROUTE_PATHS } from "@/constants";
 import Home from "@/components/pages/home/Home";
+import ProjectDetail from "@/components/pages/project-detail/ProjectDetail";
 import ProjectList from "@/components/pages/project-list/ProjectList";
 import Profile from "@/components/pages/profile/Profile";
 import homeIcon from "@/assets/images/home-icon.png";
@@ -14,6 +15,12 @@ const routes = [
         icon: homeIcon,
         detail: "LANDING PAGES, TIMELINE & INTERACTIVE",
         isShowOnNavBar: true,
+    },
+    {
+        name: PAGE_NAMES.PROJECT_DETAIL,
+        path: ROUTE_PATHS[PAGE_NAMES.PROJECT_DETAIL],
+        component: ProjectDetail,
+        isShowOnNavBar: false,
     },
     {
         name: PAGE_NAMES.PROJECT_LIST,

@@ -29,26 +29,33 @@ const Header = () => {
                 onHide={() => setShow(false)}
             >
                 <Offcanvas.Body>
-                    {routes.map((route) => (
-                        <div className="header__drawer-item" key={route.name}>
-                            <Link
-                                className="header__drawer-link"
-                                to={route.path}
-                            >
-                                <Image src={route.icon} />
-                            </Link>
-                            <div className="header__drawer-info">
+                    {routes.map((route) => {
+                        if (route.isShowOnNavBar) {
+                            return (
                                 <div
-                                    className={`header__drawer-title header__drawer-${route.name}`}
+                                    className="header__drawer-item"
+                                    key={route.name}
                                 >
-                                    {route.name}
+                                    <Link
+                                        className="header__drawer-link"
+                                        to={route.path}
+                                    >
+                                        <Image src={route.icon} />
+                                    </Link>
+                                    <div className="header__drawer-info">
+                                        <div
+                                            className={`header__drawer-title header__drawer-${route.name}`}
+                                        >
+                                            {route.name}
+                                        </div>
+                                        <div className="header__drawer-detail">
+                                            {route.detail}
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="header__drawer-detail">
-                                    {route.detail}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                            );
+                        }
+                    })}
                 </Offcanvas.Body>
             </Offcanvas>
         </>
