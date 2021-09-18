@@ -37,6 +37,7 @@ const baoKim = {
             role: "senior developer",
         },
     ],
+    introStatement: "Hello Iam Bao",
 };
 
 const baoPham = {
