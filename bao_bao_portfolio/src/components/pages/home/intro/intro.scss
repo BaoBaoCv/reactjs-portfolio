@@ -2,13 +2,14 @@
 
 .intro {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 20px;
     height: 600px;
     width: 90%;
     border-bottom: 1px dashed #c5b89f;
-    &__content {
-        color: $title-color;
+    &__card {
+        margin-bottom: 30px;
     }
 }

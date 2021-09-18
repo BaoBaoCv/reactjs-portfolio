@@ -1,13 +1,12 @@
 import React from "react";
+import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
 import "./project-card.scss";
 const ProjectCard = ({ project }) => {
     return (
         <div className="project-card">
             <div className="project-card__tags">
                 {project.tags.map((tag) => (
-                    <div key={tag} className="project-card__tags-detail">
-                        {tag}
-                    </div>
+                    <ProjectCategoryTag key={tag} data={tag} />
                 ))}
             </div>
             <div className="project-card__img"></div>
