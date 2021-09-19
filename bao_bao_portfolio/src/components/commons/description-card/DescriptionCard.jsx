@@ -1,37 +1,56 @@
 import React from "react";
+import { motion } from "framer-motion"
+
 
 import "./description-card.scss";
 const DescriptionCard = ({
     className,
     description,
     descriptionColor,
+    backgroundColor,
     isFlexHorizontal,
     title,
     width,
-    height,
+    borderColor
 }) => {
     return (
-        <div
+        <motion.div
             style={{
-                width: `${width}px`,
-                height: `${height}px`,
+                width: `${typeof width === 'string' ? width : width + 'px'}`,
                 flexDirection: `${isFlexHorizontal ? "row" : "column"}`,
+                overflow: 'hidden',
+                backgroundColor,
+                borderColor
             }}
-            className={`description-card ${className}`}
+            className={`description-card ${className ? className : ''}`}
+            whileHover={{
+                scale: 1.1
+            }}
+            whileTap={{
+                scale: 0.9
+            }}
+            drag
+            dragConstraints={{
+                right: 10,
+                top: 10,
+                bottom: 10
+            }}
         >
-            <div
-                className="description-card__title"
-                style={{ marginRight: "50px" }}
-            >
-                {title}
-            </div>
+            {title && (
+                <div
+                    className="description-card__title"
+                    style={{ marginRight: "50px" }}
+                >
+                    {title}
+                </div>
+            )}
             <div
                 className="description-card__description"
                 style={{ marginTop: "0px", color: descriptionColor }}
             >
                 {description}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

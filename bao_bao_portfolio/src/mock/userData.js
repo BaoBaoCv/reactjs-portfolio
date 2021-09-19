@@ -3,6 +3,8 @@ const baoKim = {
     timelineTitle: "DANG-KIM-BAO-13087",
     timelineStartYear: "2017",
     timelineEndYear: "2021",
+    linkedInUrl: 'https://www.linkedin.com/in/bao-dang-kim-25a612184/',
+    facebookUrl: 'https://www.facebook.com/bao.dangkim1999/',
     timelineProjects: [
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
@@ -45,6 +47,8 @@ const baoPham = {
     timelineTitle: "pham-gia-bao-13131",
     timelineStartYear: "2018",
     timelineEndYear: "2021",
+    facebookUrl: 'https://www.facebook.com/giabao.pham.92167',
+    linkedInUrl: 'https://www.linkedin.com/in/bao-pham-394284185/',
     timelineProjects: [
         {
             name: "ten_ung_dung_thu_nghiem_gpl",

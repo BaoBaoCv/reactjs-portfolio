@@ -65,7 +65,6 @@ const ProjectDetail = () => {
             <div className="project-detail__meta-data project-detail__row">
                 <DescriptionCard
                     width={500}
-                    height={170}
                     title={"credit"}
                     description={
                         "FEATURING BAO DANG KIM, HOANG VAN THIEN, DINH QUY TRI THONG, TRAN MINH THU, BUI NGUYEN MAI TRUC, BAO PHAM."
@@ -74,7 +73,6 @@ const ProjectDetail = () => {
                 ></DescriptionCard>
                 <DescriptionCard
                     width={500}
-                    height={170}
                     title={"open link"}
                     description={
                         "YOU CAN WATCH MORE ABOUT THE PROJECT VIA: YOUTUBE, GOOGLE, VNEXPRESS"
