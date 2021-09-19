@@ -8,7 +8,7 @@ import React from 'react'
 
 function SocialMedia() {
     const imageStyle = {
-        marginRight: '10px',
+        marginRight: '30px',
     }
     return (
         <div style={{ width: '100%', display: 'flex' }}>

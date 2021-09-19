@@ -45,9 +45,9 @@ const Intro = () => {
         justifyContent: 'center'
     }
     return (
-        <Container style={{ borderBottom: '1px dashed #c5b89f' }}>
+        <Container style={{ borderBottom: '1px dashed #c5b89f' }} style={{ minWidth: '90%' }}>
             <Row>
-                <Col lg={{ span: 4 }} md={{ span: 12 }} xs={{ span: 12 }}>
+                <Col lg={{ span: 4 }} md={{ span: 12 }}>
                     <div className="intro">
                         <DescriptionCard
                             className="intro__card"
@@ -76,7 +76,7 @@ const Intro = () => {
                         <SocialMedia />
                     </div>
                 </Col>
-                <Col style={{ marginTop: '20px' }} lg={8} className="d-none d-lg-block">
+                <Col style={{ marginTop: '20px' }} className="d-none d-lg-block">
                     <Row style={{ height: '100%' }}>
                         <Col style={columnForImageStyle}>
                             <motion.img src={arrow} className="arrow top-left intro__card" variants={box} initial="hidden" animate="visible1" />
