@@ -7,7 +7,10 @@ import Statementcard from "./statement-card/Statementcard";
 import name from "@/assets/images/Name.svg";
 import arrow from "@/assets/images/Arrow.svg";
 import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import RedYellowGreen from '@/components/pages/home/intro/RedYellowGreen';
+import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
+
 const Intro = () => {
     const box = {
         hidden: {
@@ -49,6 +52,7 @@ const Intro = () => {
             <Row>
                 <Col lg={{ span: 4 }} md={{ span: 12 }}>
                     <div className="intro">
+                        <RedYellowGreen />
                         <DescriptionCard
                             className="intro__card"
                             width={'100%'}
@@ -77,15 +81,58 @@ const Intro = () => {
                     </div>
                 </Col>
                 <Col style={{ marginTop: '20px' }} className="d-none d-lg-block">
-                    <Row style={{ height: '100%' }}>
+                    <Row style={{ height: '100%', position: 'relative' }}>
                         <Col style={columnForImageStyle}>
+                            <motion.img
+                                src={
+                                    CHARACTER_IMAGES[
+                                    getRndInteger(
+                                        0,
+                                        CHARACTER_IMAGES.length - 1
+                                    )
+                                    ]
+                                }
+                                initial={{
+                                    y: -1000,
+                                }}
+                                animate={{
+                                    y: 0,
+                                }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 100,
+                                    delay: 3.5
+                                }}
+                                style={{ alignSelf: 'center', position: 'absolute', top: '18%', left: '12%', zIndex: '1000' }}
+                            />
                             <motion.img src={arrow} className="arrow top-left intro__card" variants={box} initial="hidden" animate="visible1" />
                             <motion.img src={arrow} className="arrow bottom-left intro__card" variants={box} initial="hidden" animate="visible4" />
                         </Col>
                         <Col style={columnForImageStyle}>
                             <motion.img src={arrow} className="arrow top-right intro__card" variants={box} initial="hidden" animate="visible2" />
                             <motion.img src={arrow} className="arrow bottom-right intro__card" variants={box} initial="hidden" animate="visible3" />
-
+                            <motion.img
+                                src={
+                                    CHARACTER_IMAGES[
+                                    getRndInteger(
+                                        0,
+                                        CHARACTER_IMAGES.length - 1
+                                    )
+                                    ]
+                                }
+                                initial={{
+                                    y: -1000,
+                                }}
+                                animate={{
+                                    y: 0,
+                                }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 100,
+                                    delay: 3.5
+                                }}
+                                style={{ alignSelf: 'center', position: 'absolute', bottom: '24%', right: '12%', zIndex: '1000' }}
+                            />
                         </Col>
                     </Row>
                     <motion.div style={{ position: 'absolute', top: '80px', right: '33%' }}
