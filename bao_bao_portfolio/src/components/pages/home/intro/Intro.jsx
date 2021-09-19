@@ -45,7 +45,7 @@ const Intro = () => {
         justifyContent: 'center'
     }
     return (
-        <Container style={{ borderBottom: '1px dashed #c5b89f' }} style={{ minWidth: '90%' }}>
+        <Container style={{ borderBottom: '1px dashed #c5b89f', minWidth: '90%' }}>
             <Row>
                 <Col lg={{ span: 4 }} md={{ span: 12 }}>
                     <div className="intro">
