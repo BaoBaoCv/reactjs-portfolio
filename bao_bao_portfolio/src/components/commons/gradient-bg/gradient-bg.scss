@@ -1,7 +1,10 @@
 .gradient-bg {
     &__dot {
+        user-select: none;
+        pointer-events: none;
         padding-right: 20px;
         mix-blend-mode: hard-light;
         filter: blur(162.359px);
+        z-index: -1;
     }
 }

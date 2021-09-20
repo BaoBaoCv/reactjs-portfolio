@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
 
 import ProjectCard from "./project-card/ProjectCard";
@@ -27,7 +28,15 @@ const ProjectBox = ({ project }) => {
                         {project.company}
                     </div>
                 </div>
-                <Image className="project-box__bottom-icon" src={decorIcon} />
+                <Link
+                    className={"project-box__bottom-link"}
+                    to={"/projectDetail"}
+                >
+                    <Image
+                        className="project-box__bottom-icon"
+                        src={decorIcon}
+                    />
+                </Link>
             </div>
         </div>
     );

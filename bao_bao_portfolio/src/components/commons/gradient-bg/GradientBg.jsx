@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { getRndInteger } from "@/constants";
 import "./gradient-bg.scss";
 
@@ -39,6 +40,7 @@ const genGradientDots = (fullPageHeight, windowHeight) => {
 let isFirstRender = true;
 
 const GradientBg = () => {
+    let history = useHistory();
     const [windowSize, setWindowSize] = useState(getWindowDimensions);
     const [gradientDots, setGradientDots] = useState([]);
 
@@ -54,6 +56,10 @@ const GradientBg = () => {
             setWindowSize(getWindowDimensions);
         };
         window.addEventListener("resize", handleResize);
+        history.listen((location) => {
+            handleResize();
+            window.scrollTo(0, 0);
+        });
         return () => {
             window.removeEventListener("resize", handleResize);
         };

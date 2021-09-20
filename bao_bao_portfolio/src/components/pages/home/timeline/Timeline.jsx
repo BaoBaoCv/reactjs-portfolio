@@ -4,6 +4,7 @@ import {
     VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import { Col, Image, Row } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 import ProjectBox from "./project-box/ProjectBox";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
@@ -70,7 +71,14 @@ const Timeline = () => {
                                     span: 6,
                                 }}
                             >
-                                <Image
+                                <motion.img
+                                    drag
+                                    dragConstraints={{
+                                        right: 10,
+                                        top: 10,
+                                        left: 10,
+                                        bottom: 10,
+                                    }}
                                     className={
                                         charaPostions[
                                             getRndInteger(
