@@ -1,9 +1,15 @@
 import React from "react";
 import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
+import { motion } from "framer-motion";
 import "./project-card.scss";
 const ProjectCard = ({ project }) => {
     return (
-        <div className="project-card">
+        <motion.div
+            className="project-card"
+            whileHover={{
+                scale: 1.05,
+            }}
+        >
             <div className="project-card__tags">
                 {project.tags.map((tag) => (
                     <ProjectCategoryTag key={tag} data={tag} />
@@ -16,7 +22,7 @@ const ProjectCard = ({ project }) => {
                     {project.name}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
