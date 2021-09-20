@@ -1,6 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion"
-
+import { motion } from "framer-motion";
 
 import "./description-card.scss";
 const DescriptionCard = ({
@@ -11,30 +10,18 @@ const DescriptionCard = ({
     isFlexHorizontal,
     title,
     width,
-    borderColor
+    borderColor,
 }) => {
     return (
-        <motion.div
+        <div
             style={{
-                width: `${typeof width === 'string' ? width : width + 'px'}`,
+                width: `${typeof width === "string" ? width : width + "px"}`,
                 flexDirection: `${isFlexHorizontal ? "row" : "column"}`,
-                overflow: 'hidden',
+                overflow: "hidden",
                 backgroundColor,
-                borderColor
+                borderColor,
             }}
-            className={`description-card ${className ? className : ''}`}
-            whileHover={{
-                scale: 1.1
-            }}
-            whileTap={{
-                scale: 0.9
-            }}
-            drag
-            dragConstraints={{
-                right: 10,
-                top: 10,
-                bottom: 10
-            }}
+            className={`description-card ${className ? className : ""}`}
         >
             {title && (
                 <div
@@ -50,7 +37,7 @@ const DescriptionCard = ({
             >
                 {description}
             </div>
-        </motion.div>
+        </div>
     );
 };
 
