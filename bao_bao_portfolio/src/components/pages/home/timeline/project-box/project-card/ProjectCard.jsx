@@ -2,12 +2,31 @@ import React from "react";
 import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
 import { motion } from "framer-motion";
 import "./project-card.scss";
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ index, setIsHovered, project }) => {
     return (
         <motion.div
             className="project-card"
+            onHoverStart={() => {
+                setIsHovered((pre) => {
+                    pre[index] = true;
+                    return [...pre];
+                });
+            }}
+            onHoverEnd={() => {
+                setIsHovered((pre) => {
+                    pre[index] = false;
+                    return [...pre];
+                });
+            }}
             whileHover={{
                 scale: 1.05,
+            }}
+            drag
+            dragConstraints={{
+                right: 3,
+                top: 3,
+                left: 3,
+                bottom: 3,
             }}
         >
             <div className="project-card__tags">

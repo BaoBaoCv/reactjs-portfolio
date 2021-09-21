@@ -98,6 +98,7 @@ $timeline-line-width: 3px;
 
     &__character {
         position: relative;
+        cursor: pointer;
         &-left {
             position: absolute;
             top: 200px;
