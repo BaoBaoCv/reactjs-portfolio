@@ -21,13 +21,6 @@ const ProjectCard = ({ index, setIsHovered, project }) => {
             whileHover={{
                 scale: 1.05,
             }}
-            drag
-            dragConstraints={{
-                right: 3,
-                top: 3,
-                left: 3,
-                bottom: 3,
-            }}
         >
             <div className="project-card__tags">
                 {project.tags.map((tag) => (

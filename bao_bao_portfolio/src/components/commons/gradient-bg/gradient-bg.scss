@@ -1,3 +1,4 @@
+@import "@/assets/styles/index.scss";
 .gradient-bg {
     &__dot {
         user-select: none;
@@ -6,5 +7,8 @@
         mix-blend-mode: hard-light;
         filter: blur(162.359px);
         z-index: -1;
+    }
+    @media (max-width: $tablet-max - 1) {
+        display: none;
     }
 }

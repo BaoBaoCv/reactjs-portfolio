@@ -51,7 +51,6 @@ const Timeline = () => {
                 </div>
             </div>
             <div className="timeline__title">{user.timelineTitle}</div>
-            <Col lg={{ span: 2 }} />
             <VerticalTimeline animate={true} layout="1-column-left">
                 {user.timelineProjects.map((project, index) => (
                     <VerticalTimelineElement
@@ -83,9 +82,9 @@ const Timeline = () => {
                     >
                         <Row>
                             <Col
-                                lg={{
+                                xl={{
                                     order: index % 2 === 0 ? "first" : "last",
-                                    span: 5,
+                                    span: 6,
                                 }}
                             >
                                 <ProjectBox
@@ -97,23 +96,41 @@ const Timeline = () => {
                             </Col>
                             <Col
                                 className="timeline__character"
-                                lg={{
+                                xl={{
                                     order: index % 2 !== 0 ? "first" : "last",
-                                    span: 5,
+                                    span: 6,
                                 }}
                             >
-                                <motion.img
-                                    whileHover={{ scale: 1.25 }}
-                                    drag
-                                    dragConstraints={{
-                                        right: 3,
-                                        top: 3,
-                                        left: 3,
-                                        bottom: 3,
-                                    }}
-                                    className={characters[index].position}
-                                    src={characters[index].img}
-                                />
+                                {characters[index].position ==
+                                "timeline__character-left" ? (
+                                    <motion.img
+                                        drag
+                                        dragConstraints={{
+                                            right: 3,
+                                            top: 3,
+                                            left: 3,
+                                            bottom: 3,
+                                        }}
+                                        className={characters[index].position}
+                                        src={characters[index].img}
+                                    />
+                                ) : (
+                                    <div className="timeline__character-box">
+                                        <motion.img
+                                            drag
+                                            dragConstraints={{
+                                                right: 3,
+                                                top: 3,
+                                                left: 3,
+                                                bottom: 3,
+                                            }}
+                                            className={
+                                                characters[index].position
+                                            }
+                                            src={characters[index].img}
+                                        />
+                                    </div>
+                                )}
                             </Col>
                         </Row>
                     </VerticalTimelineElement>
