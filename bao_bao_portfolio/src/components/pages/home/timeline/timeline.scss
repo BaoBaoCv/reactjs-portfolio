@@ -17,33 +17,33 @@ $timeline-line-width: 3px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        width: 100vw;
-        padding-left: 150px;
+        width: 80vw;
         margin-bottom: 20px;
         &-year {
             color: $dark_green;
             font-weight: 600;
         }
         &-line {
-            width: 167px;
+            width: 20vw;
             background-color: $dark_green;
             height: 2px;
             margin: 0 16px;
         }
     }
     &__title {
-        // border: 1px solid #fff;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 200vw;
+        width: 100vw;
+        white-space: nowrap;
+        overflow: hidden;
         margin-bottom: 80px;
 
         color: $dark_green;
         font-family: Manrope;
         font-weight: 200;
         font-size: 196px;
-        line-height: 140px;
+        line-height: 155px;
 
         text-transform: uppercase;
     }
@@ -69,28 +69,32 @@ $timeline-line-width: 3px;
             display: none;
         }
     }
-    .vertical-timeline-element-icon {
-        $position-top: math.div(40 - $timeline-icon-size, 2);
-        top: $position-top;
-        left: $position-top - math.div(4 - $timeline-line-width, 2);
-        width: $timeline-icon-size;
-        height: $timeline-icon-size;
-        background-color: #9c80ea;
-        box-shadow: none;
-    }
-    .vertical-timeline::before {
-        width: $timeline-line-width;
-        background: $timeline-color;
-    }
-    .vertical-timeline-element {
-        margin: -220px 0;
-    }
-    .vertical-timeline-element-content {
-        background: transparent;
-        box-shadow: none;
-    }
-    .vertical-timeline-element-content-arrow {
-        display: none;
+    .vertical-timeline {
+        max-width: 80vw;
+        margin: 0 auto;
+        &::before {
+            width: $timeline-line-width;
+            background: $timeline-color;
+        }
+        &-element {
+            margin: -220px 0;
+            &-content {
+                background: transparent;
+                box-shadow: none;
+            }
+            &-content-arrow {
+                display: none;
+            }
+            &-icon {
+                $position-top: math.div(40 - $timeline-icon-size, 2);
+                top: $position-top;
+                left: $position-top - math.div(4 - $timeline-line-width, 2);
+                width: $timeline-icon-size;
+                height: $timeline-icon-size;
+                background-color: #9c80ea;
+                box-shadow: none;
+            }
+        }
     }
     .row {
         width: 80vw;
@@ -98,15 +102,150 @@ $timeline-line-width: 3px;
 
     &__character {
         position: relative;
+        cursor: pointer;
+        &-box {
+            position: relative;
+            max-width: 464px;
+            max-height: 366.22px;
+            width: 75vw;
+            height: 30px;
+        }
         &-left {
             position: absolute;
             top: 200px;
-            left: -80px;
+            left: -70px;
         }
         &-center {
             position: absolute;
-            top: 200px;
+            top: 220px;
             left: 200px;
+        }
+    }
+
+    .col-xl-6 {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: $tablet-max - 1) {
+        .vertical-timeline {
+            &-element {
+                margin: 0;
+            }
+        }
+        &__character {
+            &-left {
+                @include character-size;
+                position: absolute;
+                top: -22px;
+                left: -9vw;
+            }
+            &-center {
+                @include character-size;
+                position: absolute;
+                top: -300px;
+                left: 93%;
+            }
+        }
+    }
+
+    @media (max-width: $mobile-max) {
+        margin-top: 30px;
+        &__subtitle {
+            margin-bottom: 0px;
+            &-line {
+                height: 1px;
+                margin: 0 10px;
+            }
+        }
+        &__title {
+            font-size: 15vw;
+            line-height: 60px;
+            margin-bottom: 20px;
+        }
+        &__date {
+            top: -6px;
+            left: -9vw;
+        }
+        .vertical-timeline {
+            $timeline-bar-left: 10px;
+            &::before {
+                left: $timeline-bar-left;
+                width: 1px;
+            }
+            &--animate {
+                .vertical-timeline-element-icon {
+                    &.bounce-in {
+                        -webkit-animation: none;
+                        animation: none;
+                    }
+                }
+                .vertical-timeline-element-content {
+                    &.bounce-in {
+                        -webkit-animation: none;
+                        animation: none;
+                    }
+                }
+            }
+            &-element-icon {
+                $timeline-icon-size: 10px;
+                $position-top: math.div(40 - $timeline-icon-size, 2);
+                top: $position-top;
+                left: $position-top - math.div(4 - $timeline-line-width, 2) -
+                    $timeline-bar-left + 1;
+                width: $timeline-icon-size;
+                height: $timeline-icon-size;
+            }
+            &-element {
+                &-content {
+                    margin-left: 7.5vw;
+                }
+            }
+        }
+    }
+
+    @media (min-width: $mobile-max + 1) and (max-width: $tablet-min) {
+        margin-top: 45px;
+        &__subtitle {
+            margin-bottom: 0px;
+        }
+        &__title {
+            font-size: 16vw;
+            line-height: 100px;
+            margin-bottom: 50px;
+        }
+        &__date {
+            top: -6px;
+            left: -8vw;
+        }
+
+        .vertical-timeline {
+            &-element {
+                &-content {
+                    margin-left: 7.5vw;
+                }
+            }
+        }
+    }
+    @media (min-width: $tablet-min + 1) and (max-width: $tablet-max - 1) {
+        &__subtitle {
+            margin-bottom: 10px;
+        }
+        &__title {
+            font-size: 16vw;
+            line-height: 150px;
+            margin-bottom: 50px;
+        }
+        &__character {
+            &-left {
+                left: -70px;
+            }
+            &-center {
+                top: -400px;
+            }
+        }
+        &__date {
+            left: -60px;
         }
     }
 }

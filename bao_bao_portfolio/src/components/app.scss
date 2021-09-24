@@ -2,6 +2,15 @@
 @import "@/assets/styles/index.scss";
 
 body {
+    @media (max-width: $mobile-max) {
+        font-size: 3vw;
+    }
+    @media (min-width: $mobile-max + 1) and (max-width: $tablet-min) {
+        font-size: 13.5px;
+    }
+    @media (min-width: $tablet-min + 1) and (max-width: $tablet-max - 1) {
+        font-size: 16px;
+    }
     margin: 0;
     overflow-x: hidden;
     background-color: $background;

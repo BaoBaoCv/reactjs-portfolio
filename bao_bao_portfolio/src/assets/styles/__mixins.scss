@@ -5,3 +5,13 @@
     box-sizing: border-box;
     border-radius: 12px;
 }
+
+@mixin character-size {
+    @media (max-width: $mobile-max) {
+        width: 8.5vw;
+    }
+    @media (min-width: $mobile-max + 1) and (max-width: $tablet-min) {
+        width: 8.5vw;
+        max-width: 56px;
+    }
+}

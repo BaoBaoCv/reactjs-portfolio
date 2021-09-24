@@ -1,18 +1,20 @@
+@use "sass:math";
 @import "@/assets/styles/index.scss";
+$ratio-width-to-height: 1.267;
 .project-card {
     @include card-box;
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
 
-    height: 376px;
-    width: 464px;
+    max-width: 464px;
+    max-height: 366.22px;
+    width: 75vw;
+    height: math.div(75vw, $ratio-width-to-height);
     padding: 20px;
 
     font-style: normal;
-    font-size: 16px;
 
     &__tags {
         display: flex;
@@ -48,6 +50,35 @@
         &-detail {
             color: $dark_sub;
             text-transform: uppercase;
+        }
+    }
+
+    @media (max-width: $mobile-max) {
+        padding: 10px;
+        &__tags {
+            :not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+        &__name-card {
+            padding: 0 2.5vw;
+            height: 17%;
+            border-radius: 6px;
+        }
+    }
+
+    @media (min-width: $mobile-max + 1) and (max-width: $tablet-min) {
+        padding: 15px;
+        &__tags {
+            :not(:last-child) {
+                margin-right: 13px;
+            }
+        }
+        &__name-card {
+            padding: 0 28px;
+            height: 15%;
+            max-height: 49px;
+            border-radius: 6px;
         }
     }
 }

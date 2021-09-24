@@ -7,8 +7,10 @@
     &__bottom {
         display: flex;
         margin-top: 37px;
+        margin-left: 5px;
         &-description {
             text-transform: uppercase;
+            white-space: nowrap;
         }
         &-role {
             text-transform: uppercase;
@@ -25,10 +27,36 @@
             color: $dark_green;
             text-transform: capitalize;
         }
+        &-link {
+            z-index: 99;
+        }
         &-icon {
             margin-top: 30px;
             width: 100px;
             height: 110px;
+        }
+    }
+    @media (max-width: $mobile-max) {
+        &__bottom {
+            margin-top: 20px;
+            &-icon {
+                width: 18.75vw;
+                height: 20.63vw;
+                margin-top: 40px;
+                margin-left: -6vw;
+            }
+            &-company {
+                margin: 10px 0;
+                font-size: 6.5vw;
+            }
+        }
+    }
+    @media (min-width: $mobile-max + 1) and (max-width: $tablet-min) {
+        &__bottom {
+            margin-top: 30px;
+            &-icon {
+                margin-left: -10px;
+            }
         }
     }
 }
