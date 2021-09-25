@@ -62,12 +62,6 @@ const Intro = () => {
                             whileTap={{
                                 scale: 0.9,
                             }}
-                            drag
-                            dragConstraints={{
-                                right: 10,
-                                top: 10,
-                                bottom: 10,
-                            }}
                         >
                             <DescriptionCard
                                 className="intro__card"
@@ -85,12 +79,6 @@ const Intro = () => {
                             whileTap={{
                                 scale: 0.9,
                             }}
-                            drag
-                            dragConstraints={{
-                                right: 10,
-                                top: 10,
-                                bottom: 10,
-                            }}
                         >
                             <DescriptionCard
                                 className="intro__card"
@@ -107,12 +95,6 @@ const Intro = () => {
                             }}
                             whileTap={{
                                 scale: 0.9,
-                            }}
-                            drag
-                            dragConstraints={{
-                                right: 10,
-                                top: 10,
-                                bottom: 10,
                             }}
                         >
                             <Statementcard

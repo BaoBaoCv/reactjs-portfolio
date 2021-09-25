@@ -16,6 +16,9 @@
     &__character-container {
         position: relative;
     }
+    @media (max-width: $tablet-min) {
+        margin: 20px 0;
+    }
 }
 
 .arrow {

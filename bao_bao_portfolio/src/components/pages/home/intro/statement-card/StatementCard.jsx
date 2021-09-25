@@ -1,22 +1,29 @@
-import React from 'react'
+import React from "react";
 import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
-import { Image } from 'react-bootstrap';
+import { Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 
+import "./statement-card.scss";
 function Statementcard({ ...otherProps }) {
     return (
-        <div style={{ border: '2px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
-            <DescriptionCard
-                {...otherProps}
-            />
+        <div
+            className="statement-card"
+            style={{
+                border: "2px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                position: "relative",
+            }}
+        >
+            <DescriptionCard {...otherProps} />
             <motion.img
+                className="statement-card__character"
                 src={
                     CHARACTER_IMAGES[
-                    getRndInteger(
-                        0,
-                        CHARACTER_IMAGES.length - 1
-                    )
+                        getRndInteger(0, CHARACTER_IMAGES.length - 1)
                     ]
                 }
                 initial={{
@@ -28,12 +35,11 @@ function Statementcard({ ...otherProps }) {
                 transition={{
                     type: "spring",
                     stiffness: 100,
-                    delay: 3.2
+                    delay: 3.2,
                 }}
-                style={{ alignSelf: 'center', position: 'absolute', bottom: '-12px' }}
             />
         </div>
-    )
+    );
 }
 
-export default Statementcard
+export default Statementcard;
