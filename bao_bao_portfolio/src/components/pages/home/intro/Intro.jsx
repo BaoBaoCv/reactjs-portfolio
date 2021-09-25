@@ -4,7 +4,7 @@ import { user } from "@/mock";
 import "./intro.scss";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import Statementcard from "./statement-card/Statementcard";
-import name from "@/assets/images/Name.svg";
+// import name from "@/assets/images/Name.svg";
 import arrow from "@/assets/images/Arrow.svg";
 import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
 import { motion } from "framer-motion";
@@ -133,41 +133,43 @@ const Intro = () => {
                 >
                     <Row style={{ height: "100%", position: "relative" }}>
                         <Col style={columnForImageStyle}>
-                            <motion.img
-                                src={
-                                    CHARACTER_IMAGES[
-                                        getRndInteger(
-                                            0,
-                                            CHARACTER_IMAGES.length - 1
-                                        )
-                                    ]
-                                }
-                                initial={{
-                                    y: -1000,
-                                }}
-                                animate={{
-                                    y: 0,
-                                }}
-                                transition={{
-                                    type: "spring",
-                                    stiffness: 100,
-                                    delay: 3.5,
-                                }}
-                                style={{
-                                    alignSelf: "center",
-                                    position: "absolute",
-                                    top: "18%",
-                                    left: "12%",
-                                    zIndex: "1000",
-                                }}
-                            />
-                            <motion.img
-                                src={arrow}
-                                className="arrow top-left intro__card"
-                                variants={box}
-                                initial="hidden"
-                                animate="visible1"
-                            />
+                            <div className="intro__character-container">
+                                <motion.img
+                                    src={
+                                        CHARACTER_IMAGES[
+                                            getRndInteger(
+                                                0,
+                                                CHARACTER_IMAGES.length - 1
+                                            )
+                                        ]
+                                    }
+                                    initial={{
+                                        y: -1000,
+                                    }}
+                                    animate={{
+                                        y: 0,
+                                    }}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 100,
+                                        delay: 3.5,
+                                    }}
+                                    style={{
+                                        alignSelf: "center",
+                                        position: "absolute",
+                                        top: "18%",
+                                        left: "-6%",
+                                        zIndex: "1000",
+                                    }}
+                                />
+                                <motion.img
+                                    src={arrow}
+                                    className="arrow top-left intro__card"
+                                    variants={box}
+                                    initial="hidden"
+                                    animate="visible1"
+                                />
+                            </div>
                             <motion.img
                                 src={arrow}
                                 className="arrow bottom-left intro__card"
@@ -184,41 +186,43 @@ const Intro = () => {
                                 initial="hidden"
                                 animate="visible2"
                             />
-                            <motion.img
-                                src={arrow}
-                                className="arrow bottom-right intro__card"
-                                variants={box}
-                                initial="hidden"
-                                animate="visible3"
-                            />
-                            <motion.img
-                                src={
-                                    CHARACTER_IMAGES[
-                                        getRndInteger(
-                                            0,
-                                            CHARACTER_IMAGES.length - 1
-                                        )
-                                    ]
-                                }
-                                initial={{
-                                    y: -1000,
-                                }}
-                                animate={{
-                                    y: 0,
-                                }}
-                                transition={{
-                                    type: "spring",
-                                    stiffness: 100,
-                                    delay: 3.5,
-                                }}
-                                style={{
-                                    alignSelf: "center",
-                                    position: "absolute",
-                                    bottom: "24%",
-                                    right: "12%",
-                                    zIndex: "1000",
-                                }}
-                            />
+                            <div className="intro__character-container">
+                                <motion.img
+                                    src={arrow}
+                                    className="arrow bottom-right intro__card"
+                                    variants={box}
+                                    initial="hidden"
+                                    animate="visible3"
+                                />
+                                <motion.img
+                                    src={
+                                        CHARACTER_IMAGES[
+                                            getRndInteger(
+                                                0,
+                                                CHARACTER_IMAGES.length - 1
+                                            )
+                                        ]
+                                    }
+                                    initial={{
+                                        y: -1000,
+                                    }}
+                                    animate={{
+                                        y: 0,
+                                    }}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 100,
+                                        delay: 3.5,
+                                    }}
+                                    style={{
+                                        alignSelf: "center",
+                                        position: "absolute",
+                                        bottom: "24%",
+                                        right: "-6%",
+                                        zIndex: "1000",
+                                    }}
+                                />
+                            </div>
                         </Col>
                     </Row>
                     <motion.div
@@ -240,7 +244,7 @@ const Intro = () => {
                             delay: 2.5,
                         }}
                     >
-                        <Image src={name} />
+                        {/* <Image src={name} /> */}
                     </motion.div>
                 </Col>
             </Row>

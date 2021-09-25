@@ -6,7 +6,7 @@ import Timeline from "./timeline/Timeline";
 const Home = () => {
     return (
         <div className="home">
-            {/* <Intro /> */}
+            <Intro />
             <Timeline />
         </div>
     );
