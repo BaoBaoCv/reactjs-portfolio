@@ -1,0 +1,15 @@
+@import "@/assets/styles/index.scss";
+
+.statement-card {
+    &__character {
+        align-self: center;
+        position: absolute;
+        top: 59%;
+    }
+    @media (max-width: $tablet-max) {
+        &__character {
+            @include character-size;
+            // width: 30px;
+        }
+    }
+}
