@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
 .header {
     display: flex;
-    padding: 10px 50px;
+    align-items: center;
+    padding: 10px 4vw;
     background-color: $primary-color;
     &__title {
         display: flex;
@@ -17,19 +18,24 @@
 
     &__menu {
         margin-left: auto;
-        margin-right: 2vw;
+        &-home {
+            max-width: 33px;
+            cursor: pointer;
+        }
         &-icon {
-            height: 36px;
-            width: 36px;
+            margin-left: 8px;
+            max-width: 36px;
+            cursor: pointer;
         }
     }
 
     &__drawer {
-        display: flex;
         padding: 70px 20px;
-        min-width: 550px;
         &.offcanvas {
             background-color: $drawer-background;
+            &-end {
+                min-width: 537px;
+            }
         }
         &-item {
             display: flex;
@@ -44,7 +50,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
         }
         &-info {
             display: flex;
@@ -55,7 +60,6 @@
             padding-top: 10px;
             width: 250px;
             font-weight: 500;
-            font-size: 16px;
         }
         &-title {
             font-family: Manrope;
@@ -76,8 +80,34 @@
             color: #df52f1;
         }
     }
-}
 
+    @media (max-width: $tablet-min) {
+        padding: 5px 4vw;
+        &__drawer {
+            padding: 10vh 10px;
+            &-link {
+                width: 110px;
+            }
+            &-img {
+                width: 20vw;
+                max-width: 70px;
+            }
+            &.offcanvas {
+                &-end {
+                    min-width: 0;
+                    width: 100vw;
+                }
+            }
+            &-title {
+                font-size: min(7vw, 35px);
+            }
+            &-detail {
+                width: 50vw;
+                padding-top: 5px;
+            }
+        }
+    }
+}
 .offcanvas-backdrop.show {
     opacity: 0 !important;
 }

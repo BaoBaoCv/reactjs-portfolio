@@ -1,24 +1,34 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Button, Image, Offcanvas } from "react-bootstrap";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { routes } from "@/configs";
 import { user } from "@/mock/userData";
+import BackHome from "@/assets/images/back-home.svg";
 import HamburgerIcon from "@/assets/images/hamburger.svg";
 import "./header.scss";
+
 const Header = () => {
     const [show, setShow] = useState(false);
+    let history = useHistory();
     return (
         <>
             <div className="header">
                 <div className="header__title">{user.headerTitle}</div>
-                <Button
-                    className="header__menu"
-                    variant="link"
-                    onClick={() => setShow(true)}
-                >
-                    <Image className="header__menu-icon" src={HamburgerIcon} />
-                </Button>
+                <div className="header__menu">
+                    <Image
+                        onClick={() => {
+                            history.goBack();
+                        }}
+                        className="header__menu-home"
+                        src={BackHome}
+                    />
+                    <Image
+                        onClick={() => setShow(true)}
+                        className="header__menu-icon"
+                        src={HamburgerIcon}
+                    />
+                </div>
             </div>
 
             <Offcanvas
@@ -28,6 +38,9 @@ const Header = () => {
                 scroll={true}
                 onHide={() => setShow(false)}
             >
+                <Offcanvas.Header closeButton closeVariant={"white"}>
+                    <Offcanvas.Title />
+                </Offcanvas.Header>
                 <Offcanvas.Body>
                     {routes.map((route) => {
                         if (route.isShowOnNavBar) {
@@ -37,10 +50,14 @@ const Header = () => {
                                     key={route.name}
                                 >
                                     <Link
+                                        onClick={() => setShow(false)}
                                         className="header__drawer-link"
                                         to={route.path}
                                     >
-                                        <Image src={route.icon} />
+                                        <Image
+                                            className={"header__drawer-img"}
+                                            src={route.icon}
+                                        />
                                     </Link>
                                     <div className="header__drawer-info">
                                         <div

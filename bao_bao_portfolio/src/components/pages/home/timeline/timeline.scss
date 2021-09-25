@@ -147,6 +147,22 @@ $timeline-line-width: 3px;
                 left: 93%;
             }
         }
+        .vertical-timeline {
+            &--animate {
+                .vertical-timeline-element-icon {
+                    &.bounce-in {
+                        -webkit-animation: none;
+                        animation: none;
+                    }
+                }
+                .vertical-timeline-element-content {
+                    &.bounce-in {
+                        -webkit-animation: none;
+                        animation: none;
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: $mobile-max) {
