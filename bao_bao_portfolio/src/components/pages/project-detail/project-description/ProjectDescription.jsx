@@ -1,6 +1,14 @@
 import React from "react";
 import "./project-description.scss";
-const ProjectDescription = ({ className, title }) => {
+import AppText from "../AppText";
+const ProjectDescription = ({ className, title, col1, col2, isMulti }) => {
+    let multiStyle;
+    if (!isMulti) {
+        multiStyle = { width: 'auto' }
+        console.log(multiStyle)
+    } else {
+        multiStyle = { width: '500px' }
+    }
     return (
         <div className={`project-description ${className}`}>
             <div className="project-description__title-container">
@@ -9,15 +17,12 @@ const ProjectDescription = ({ className, title }) => {
                     {title}
                 </div>
             </div>
-            <div className="project-description__para project-description__item">
-                ontrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-            </div>
-            <div className="project-description__para project-description__item">
-                CURRENTLY, I AM A WEB DEVELOPER & PROGRAMER WHO LOVES DOING
-                THINGS WITH FRESH MINDS. PREVIOUSLY, I WORKED AS PROGRAMMER AT
-                APPLE, SAMSUNG & XIAOMI. NOW I AM FREELANCER AND HAPPY TO SEE
-                YOU.
-            </div>
+            <AppText style={multiStyle}>
+                {col1}
+            </AppText>
+            {isMulti ? <AppText style={multiStyle}>
+                {col2}
+            </AppText> : ''}
         </div>
     );
 };
