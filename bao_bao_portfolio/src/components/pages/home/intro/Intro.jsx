@@ -4,7 +4,7 @@ import { user } from "@/mock";
 import "./intro.scss";
 import { Col, Container, Row, Image } from "react-bootstrap";
 import Statementcard from "./statement-card/Statementcard";
-// import name from "@/assets/images/Name.svg";
+import name from "@/assets/images/Name.png";
 import arrow from "@/assets/images/Arrow.svg";
 import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
 import { motion } from "framer-motion";
@@ -85,7 +85,7 @@ const Intro = () => {
                                 width={"100%"}
                                 title={"About"}
                                 description={
-                                    "CURRENTLY, I AM A WEB DEVELOPER & PROGRAMER WHO LOVES DOING THINGS WITH FRESH MINDS. PREVIOUSLY, I WORKED AS PROGRAMMER AT APPLE, SAMSUNG & XIAOMI. NOW I AM FREELANCER AND HAPPY TO SEE YOU."
+                                    "CURRENTLY, I AM A WEB DEVELOPER & PROGRAMER WHO LOVES DOING THINGS WITH FRESH MINDS. PREVIOUSLY, I WORKED AS PROGRAMMER AT APPLE, SAMSUNG & XIAOMI. NOW I AM FREELANCER AND HAPPY TO SEE YOU. bjidjiowajdio awijd iowjadijawdj ijdiawjodanwjidna wmdnandionw adwadi naidnawi noa ndawiond iawndio"
                                 }
                             />
                         </motion.div>
@@ -119,10 +119,10 @@ const Intro = () => {
                                 <motion.img
                                     src={
                                         CHARACTER_IMAGES[
-                                            getRndInteger(
-                                                0,
-                                                CHARACTER_IMAGES.length - 1
-                                            )
+                                        getRndInteger(
+                                            0,
+                                            CHARACTER_IMAGES.length - 1
+                                        )
                                         ]
                                     }
                                     initial={{
@@ -179,10 +179,10 @@ const Intro = () => {
                                 <motion.img
                                     src={
                                         CHARACTER_IMAGES[
-                                            getRndInteger(
-                                                0,
-                                                CHARACTER_IMAGES.length - 1
-                                            )
+                                        getRndInteger(
+                                            0,
+                                            CHARACTER_IMAGES.length - 1
+                                        )
                                         ]
                                     }
                                     initial={{
@@ -226,7 +226,7 @@ const Intro = () => {
                             delay: 2.5,
                         }}
                     >
-                        {/* <Image src={name} /> */}
+                        <Image src={name} />
                     </motion.div>
                 </Col>
             </Row>

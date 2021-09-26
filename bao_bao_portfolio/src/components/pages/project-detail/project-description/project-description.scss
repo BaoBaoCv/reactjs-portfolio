@@ -5,14 +5,31 @@ $page-width: 90%;
     width: $page-width;
     // margin-top: 50px;
     text-transform: uppercase;
+    @media (max-width: $tablet-min) {
+        flex-direction: column;
+    }
     &__item {
-        height: 150px;
+        // height: 150px;
+        margin-bottom: 3%;
+        @media (max-width: $tablet-min) {
+            display: block;
+            overflow: auto;
+            height: auto;
+            padding: 10px 0;
+        }
+    }
+    &__title-container{
+        @media (max-width: $tablet-min) {
+            display: flex;
+            align-items: center;
+        }
     }
     &__line {
         height: 40px;
-        margin-left: -30px;
+        margin-left: -2%;
         margin-right: 30px;
         border-left: 2px solid $accent-yellow;
+        position: absolute;
     }
 
     &__title {
@@ -23,6 +40,10 @@ $page-width: 90%;
         font-size: 32px;
         line-height: 32px;
         color: $dark-green;
+        @media (max-width: $tablet-min) {
+            line-height: normal;
+            display: block;
+        }
     }
 
     &__para {
@@ -33,5 +54,8 @@ $page-width: 90%;
         }
         color: $title-color;
         font-weight: 500;
+        @media (max-width: $tablet-min) {
+            width: 100%;
+        }
     }
 }
