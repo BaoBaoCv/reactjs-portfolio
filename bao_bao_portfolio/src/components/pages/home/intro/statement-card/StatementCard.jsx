@@ -5,7 +5,7 @@ import { Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 import "./statement-card.scss";
-function Statementcard({ ...otherProps }) {
+const Statementcard = ({ ...otherProps }) => {
     return (
         <div
             className="statement-card"
@@ -40,6 +40,6 @@ function Statementcard({ ...otherProps }) {
             />
         </div>
     );
-}
+};
 
 export default Statementcard;

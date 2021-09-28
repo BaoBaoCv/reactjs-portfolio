@@ -10,7 +10,7 @@ library.add(faFacebook, faLinkedin, faInstagram);
 
 import React from "react";
 
-function SocialMedia() {
+const SocialMedia = () => {
     const imageStyle = {
         marginRight: "30px",
     };
@@ -41,6 +41,6 @@ function SocialMedia() {
             </a>
         </div>
     );
-}
+};
 
 export default SocialMedia;

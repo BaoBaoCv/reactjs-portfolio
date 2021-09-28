@@ -3,36 +3,13 @@ $page-width: 90%;
 .project-description {
     display: flex;
     width: $page-width;
-    // margin-top: 50px;
-    text-transform: uppercase;
-    @media (max-width: $tablet-min) {
-        flex-direction: column;
-    }
     &__item {
-        // height: 150px;
-        margin-bottom: 3%;
-        @media (max-width: $tablet-min) {
-            display: block;
-            overflow: auto;
-            height: auto;
-            padding: 10px 0;
-        }
-    }
-    &__title-container{
-        @media (max-width: $tablet-min) {
-            display: flex;
-            align-items: center;
-        }
-    }
-    &__line {
-        height: 40px;
-        margin-left: -2%;
-        margin-right: 30px;
-        border-left: 2px solid $accent-yellow;
-        position: absolute;
+        // margin-bottom: 3%;
     }
 
     &__title {
+        margin-left: -2vw;
+        padding-left: 2vw;
         margin-right: 120px;
         font-family: Manrope;
         font-style: normal;
@@ -40,22 +17,58 @@ $page-width: 90%;
         font-size: 32px;
         line-height: 32px;
         color: $dark-green;
-        @media (max-width: $tablet-min) {
-            line-height: normal;
-            display: block;
-        }
+        border-left: 2px solid $accent-yellow;
     }
 
     &__para {
-        width: 500px;
         height: fit-content;
+        color: $title-color;
+        font-weight: 500;
+        white-space: pre-line;
         &:not(:last-child) {
             margin-right: 120px;
         }
-        color: $title-color;
-        font-weight: 500;
-        @media (max-width: $tablet-min) {
+        &.one-col {
             width: 100%;
+        }
+        &.two-col {
+            width: 40%;
+        }
+    }
+
+    @media (max-width: $tablet-max - 1) {
+        flex-direction: column;
+        &__title {
+            font-size: $project-detail-title-mobile-size + 5px;
+            margin-left: -2vw;
+            padding-left: 2vw;
+        }
+        &__item {
+            margin-bottom: 10px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        &__title {
+            line-height: normal;
+            display: block;
+            &-container {
+                display: flex;
+                align-items: center;
+            }
+        }
+        &__para {
+            width: 100%;
+            &.two-col {
+                width: 100%;
+            }
+        }
+    }
+
+    @media (min-width: $mobile-max) and (max-width: $tablet-min - 1) {
+        &__title {
+            font-size: $project-detail-title-tablet-size + 5px;
+            margin-left: -2vw;
+            padding-left: 2vw;
         }
     }
 }
