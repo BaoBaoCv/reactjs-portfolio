@@ -1,24 +1,14 @@
 import React from "react";
-import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
-import { Image } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 import "./statement-card.scss";
-const Statementcard = ({ ...otherProps }) => {
+const StatementCard = ({ className }) => {
     return (
-        <div
-            className="statement-card"
-            style={{
-                border: "2px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                position: "relative",
-            }}
-        >
-            <DescriptionCard {...otherProps} />
+        <div className={`${className} statement-card`}>
+            <div className="statement-card__card">
+                "TOUCH “red”; “yellow; “green” TO PERFORM A MAGIC MOVES."
+            </div>
             <motion.img
                 className="statement-card__character"
                 src={
@@ -42,4 +32,4 @@ const Statementcard = ({ ...otherProps }) => {
     );
 };
 
-export default Statementcard;
+export default StatementCard;

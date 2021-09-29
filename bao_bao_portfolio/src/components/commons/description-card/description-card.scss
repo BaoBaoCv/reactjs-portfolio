@@ -7,13 +7,24 @@
     justify-content: flex-start;
     padding: 30px 40px;
     font-weight: 600;
+    &.column {
+        flex-direction: row;
+    }
     &__title {
+        &.column {
+            margin-bottom: 0;
+        }
         color: $dark-green;
+        margin-right: 50px;
         margin-bottom: 10px;
         text-transform: uppercase;
     }
     &__description {
         color: #ffffff;
         text-transform: uppercase;
+    }
+
+    @media (max-width: $tablet-min - 1) {
+        padding: 20px 30px;
     }
 }

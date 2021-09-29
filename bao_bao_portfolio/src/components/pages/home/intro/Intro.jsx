@@ -2,8 +2,8 @@ import React from "react";
 import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
 import { user } from "@/mock";
 import "./intro.scss";
-import { Col, Container, Row, Image } from "react-bootstrap";
-import Statementcard from "./statement-card/Statementcard";
+import { Col, Container, Row } from "react-bootstrap";
+import StatementCard from "./statement-card/Statementcard";
 import name from "@/assets/images/Name.png";
 import arrow from "@/assets/images/Arrow.svg";
 import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
@@ -11,57 +11,58 @@ import { motion } from "framer-motion";
 import RedYellowGreen from "@/components/pages/home/intro/RedYellowGreen";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
 
+const box = {
+    hidden: {
+        opacity: 0,
+    },
+    visible1: {
+        opacity: 1,
+        transition: {
+            delay: 0.5,
+        },
+    },
+    visible2: {
+        opacity: 1,
+        transition: {
+            delay: 1,
+        },
+    },
+    visible3: {
+        opacity: 1,
+        transition: {
+            delay: 1.5,
+        },
+    },
+    visible4: {
+        opacity: 1,
+        transition: {
+            delay: 2,
+        },
+    },
+};
+
+const columnForImageStyle = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+};
+
 const Intro = () => {
-    const box = {
-        hidden: {
-            opacity: 0,
-        },
-        visible1: {
-            opacity: 1,
-            transition: {
-                delay: 0.5,
-            },
-        },
-        visible2: {
-            opacity: 1,
-            transition: {
-                delay: 1,
-            },
-        },
-        visible3: {
-            opacity: 1,
-            transition: {
-                delay: 1.5,
-            },
-        },
-        visible4: {
-            opacity: 1,
-            transition: {
-                delay: 2,
-            },
-        },
-    };
-    const columnForImageStyle = {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-    };
     return (
-        <Container
-            style={{ borderBottom: "1px dashed #c5b89f", minWidth: "90%" }}
-        >
+        <Container className="intro__container">
             <Row>
                 <Col lg={{ span: 4 }} md={{ span: 12 }}>
                     <div className="intro">
                         <RedYellowGreen />
                         <motion.div
                             whileHover={{
-                                scale: 1.1,
+                                scale: 1.05,
                             }}
                             whileTap={{
-                                scale: 0.9,
+                                scale: 0.95,
                             }}
+                            style={{ width: "100%" }}
                         >
                             <DescriptionCard
                                 className="intro__card"
@@ -74,10 +75,10 @@ const Intro = () => {
                         </motion.div>
                         <motion.div
                             whileHover={{
-                                scale: 1.1,
+                                scale: 1.05,
                             }}
                             whileTap={{
-                                scale: 0.9,
+                                scale: 0.95,
                             }}
                         >
                             <DescriptionCard
@@ -91,20 +92,13 @@ const Intro = () => {
                         </motion.div>
                         <motion.div
                             whileHover={{
-                                scale: 1.1,
+                                scale: 1.05,
                             }}
                             whileTap={{
-                                scale: 0.9,
+                                scale: 0.95,
                             }}
                         >
-                            <Statementcard
-                                className="intro__card"
-                                description="TOUCH “red”; “yellow; “green” TO PERFORM A MAGIC MOVES."
-                                backgroundColor={"yellow"}
-                                borderColor={"green"}
-                                descriptionColor={"black"}
-                                width={"100%"}
-                            />
+                            <StatementCard className="intro__card" />
                         </motion.div>
                         <SocialMedia />
                     </div>
@@ -117,12 +111,29 @@ const Intro = () => {
                         <Col style={columnForImageStyle}>
                             <div className="intro__character-container">
                                 <motion.img
+                                    className="intro__character-avatar"
+                                    src={name}
+                                    animate={{
+                                        x: 300,
+                                        opacity: 1,
+                                    }}
+                                    initial={{
+                                        opacity: 0,
+                                    }}
+                                    transition={{
+                                        type: "spring",
+                                        stiffness: 300,
+                                        delay: 2.5,
+                                    }}
+                                />
+                                <motion.img
+                                    className="intro__character-img-left"
                                     src={
                                         CHARACTER_IMAGES[
-                                        getRndInteger(
-                                            0,
-                                            CHARACTER_IMAGES.length - 1
-                                        )
+                                            getRndInteger(
+                                                0,
+                                                CHARACTER_IMAGES.length - 1
+                                            )
                                         ]
                                     }
                                     initial={{
@@ -136,17 +147,10 @@ const Intro = () => {
                                         stiffness: 100,
                                         delay: 3.5,
                                     }}
-                                    style={{
-                                        alignSelf: "center",
-                                        position: "absolute",
-                                        top: "18%",
-                                        left: "-6%",
-                                        zIndex: "1000",
-                                    }}
                                 />
                                 <motion.img
                                     src={arrow}
-                                    className="arrow top-left intro__card"
+                                    className="intro__arrow top-left"
                                     variants={box}
                                     initial="hidden"
                                     animate="visible1"
@@ -154,7 +158,7 @@ const Intro = () => {
                             </div>
                             <motion.img
                                 src={arrow}
-                                className="arrow bottom-left intro__card"
+                                className="intro__arrow bottom-left "
                                 variants={box}
                                 initial="hidden"
                                 animate="visible4"
@@ -163,7 +167,7 @@ const Intro = () => {
                         <Col style={columnForImageStyle}>
                             <motion.img
                                 src={arrow}
-                                className="arrow top-right intro__card"
+                                className="intro__arrow top-right"
                                 variants={box}
                                 initial="hidden"
                                 animate="visible2"
@@ -171,18 +175,19 @@ const Intro = () => {
                             <div className="intro__character-container">
                                 <motion.img
                                     src={arrow}
-                                    className="arrow bottom-right intro__card"
+                                    className="intro__arrow bottom-right"
                                     variants={box}
                                     initial="hidden"
                                     animate="visible3"
                                 />
                                 <motion.img
+                                    className="intro__character-img-right"
                                     src={
                                         CHARACTER_IMAGES[
-                                        getRndInteger(
-                                            0,
-                                            CHARACTER_IMAGES.length - 1
-                                        )
+                                            getRndInteger(
+                                                0,
+                                                CHARACTER_IMAGES.length - 1
+                                            )
                                         ]
                                     }
                                     initial={{
@@ -196,38 +201,10 @@ const Intro = () => {
                                         stiffness: 100,
                                         delay: 3.5,
                                     }}
-                                    style={{
-                                        alignSelf: "center",
-                                        position: "absolute",
-                                        bottom: "24%",
-                                        right: "-6%",
-                                        zIndex: "1000",
-                                    }}
                                 />
                             </div>
                         </Col>
                     </Row>
-                    <motion.div
-                        style={{
-                            position: "absolute",
-                            top: "80px",
-                            right: "33%",
-                        }}
-                        animate={{
-                            x: 300,
-                            opacity: 1,
-                        }}
-                        initial={{
-                            opacity: 0,
-                        }}
-                        transition={{
-                            type: "spring",
-                            stiffness: 300,
-                            delay: 2.5,
-                        }}
-                    >
-                        <Image src={name} />
-                    </motion.div>
                 </Col>
             </Row>
         </Container>

@@ -11,7 +11,14 @@ const SocialMedia = () => {
         marginRight: "10px",
     };
     return (
-        <div style={{ width: "100%", display: "flex", marginBottom: "20px" }}>
+        <div
+            style={{
+                marginLeft: "30px",
+                width: "100%",
+                display: "flex",
+                marginBottom: "20px",
+            }}
+        >
             <Image src={red} style={imageStyle} />
             <Image src={yellow} style={imageStyle} />
             <Image src={green} style={imageStyle} />

@@ -6,31 +6,27 @@ const DescriptionCard = ({
     className,
     description,
     descriptionColor,
-    backgroundColor,
     isFlexHorizontal,
     title,
     width,
-    borderColor,
 }) => {
     return (
         <div
+            className={`${className} description-card ${
+                isFlexHorizontal ? "column" : ""
+            }`}
             style={{
-                width: `${typeof width === "string" ? width : width + "px"}`,
-                flexDirection: `${isFlexHorizontal ? "row" : "column"}`,
                 overflow: "hidden",
-                backgroundColor,
-                borderColor,
+                width: width,
             }}
-            className={`description-card ${className ? className : ""}`}
         >
-            {title && (
-                <div
-                    className="description-card__title"
-                    style={{ marginRight: "50px" }}
-                >
-                    {title}
-                </div>
-            )}
+            <div
+                className={`description-card__title ${
+                    isFlexHorizontal ? "column" : ""
+                }`}
+            >
+                {title}
+            </div>
             <div
                 className="description-card__description"
                 style={{ marginTop: "0px", color: descriptionColor }}

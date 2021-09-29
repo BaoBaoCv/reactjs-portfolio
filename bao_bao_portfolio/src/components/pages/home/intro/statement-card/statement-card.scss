@@ -1,10 +1,21 @@
 @import "@/assets/styles/index.scss";
 
 .statement-card {
+    position: relative;
+    &__card {
+        background-color: $accent-yellow;
+        border: 2px solid #fff;
+        color: #24242f;
+        padding: 30px 40px;
+        font-weight: 600;
+        box-sizing: border-box;
+        border-radius: 12px;
+    }
     &__character {
         align-self: center;
         position: absolute;
-        top: 59%;
+        top: 75%;
+        left: 40%;
     }
     @media (max-width: $tablet-max) {
         &__character {
