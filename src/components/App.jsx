@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import { routes } from "@/configs";
 import Header from "@/components/commons/header/Header";
 import GradientBg from "./commons/gradient-bg/GradientBg";
+import Footer from "./commons/footer/Footer";
 
 import "@/components/app.scss";
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
                 ))}
             </Switch>
             <GradientBg />
+            <Footer />
         </div>
     );
 };

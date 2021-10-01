@@ -1,3 +1,4 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faFacebook,
@@ -5,8 +6,6 @@ import {
     faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { user } from "@/mock";
-
-import React from "react";
 
 const SocialMedia = () => {
     const imageStyle = {
