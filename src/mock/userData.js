@@ -25,7 +25,7 @@ const baoKim = {
             date: new Date(2020, 5),
             company: "Google Inc.",
             role: "senior developer",
-            id: "bao-kim/projects/1",
+            id: "bao-kim/1",
         },
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
@@ -34,7 +34,7 @@ const baoKim = {
             date: new Date(2020, 5),
             company: "Google Inc.",
             role: "senior developer",
-            id: "bao-kim/projects/2",
+            id: "bao-kim/2",
         },
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
@@ -43,7 +43,7 @@ const baoKim = {
             date: new Date(2020, 5),
             company: "Google Inc.",
             role: "senior developer",
-            id: "bao-kim/projects/3",
+            id: "bao-kim/3",
         },
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
@@ -52,7 +52,7 @@ const baoKim = {
             date: new Date(2020, 5),
             company: "Net Comp.",
             role: "senior developer",
-            id: "bao-kim/projects/4",
+            id: "bao-kim/4",
         },
     ],
 };
@@ -82,7 +82,7 @@ const baoPham = {
             date: new Date(2020, 5),
             company: "Google Inc.",
             role: "senior developer",
-            id: "bao-pham/projects/1",
+            id: "bao-pham/1",
         },
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
@@ -91,7 +91,7 @@ const baoPham = {
             date: new Date(2020, 5),
             company: "Google Inc.",
             role: "senior developer",
-            id: "bao-pham/projects/2",
+            id: "bao-pham/2",
         },
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
@@ -100,7 +100,7 @@ const baoPham = {
             date: new Date(2020, 5),
             company: "Google Inc.",
             role: "senior developer",
-            id: "bao-pham/projects/3",
+            id: "bao-pham/3",
         },
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
@@ -109,9 +109,9 @@ const baoPham = {
             date: new Date(2020, 5),
             company: "Net Comp.",
             role: "senior developer",
-            id: "bao-pham/projects/4",
+            id: "bao-pham/4",
         },
     ],
 };
 
-export { baoPham as user };
+export { baoKim as user };

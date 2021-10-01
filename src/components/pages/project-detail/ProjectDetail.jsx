@@ -15,7 +15,11 @@ const ProjectDetail = ({ location }) => {
     const project = location.state.project;
     useEffect(() => {
         const fetchData = async () => {
-            const data = await import(`../../../mock/${project.id}.js`);
+            const root = project.id.split("/")[0];
+            const id = project.id.split("/")[1];
+            const data = await import(
+                `../../../mock/${root}/projects/${id}.js`
+            );
             setProjectDetail(data.default);
         };
         fetchData();
