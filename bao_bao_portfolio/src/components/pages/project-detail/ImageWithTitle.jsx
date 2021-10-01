@@ -1,6 +1,4 @@
 import React from "react";
-import placeholder_img from "@/assets/images/placeholder.jpg";
-import { Container, Image, Row, Col } from "react-bootstrap";
 
 import "./project-detail.scss";
 
