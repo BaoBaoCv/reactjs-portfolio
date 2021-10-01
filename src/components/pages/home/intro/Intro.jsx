@@ -2,7 +2,7 @@ import React from "react";
 import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
 import "./intro.scss";
 import { Col, Container, Row } from "react-bootstrap";
-import StatementCard from "./statement-card/Statementcard";
+import StatementCard from "./statement-card/StatementCard";
 import arrow from "@/assets/images/Arrow.svg";
 import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
 import { motion } from "framer-motion";
