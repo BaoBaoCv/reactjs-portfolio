@@ -13,6 +13,7 @@ const Home = () => {
             setUserData(user);
         };
         fetchData();
+
     }, []);
     return !userData ? (
         <PageSpinner />

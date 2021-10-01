@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, BrowserRouter as Router } from "react-router-dom";
 import { Button, Image, Offcanvas } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { routes } from "@/configs";
@@ -14,7 +14,13 @@ const Header = () => {
     return (
         <>
             <div className="header">
-                <div className="header__title">{user.headerTitle}</div>
+                <Router>
+                    <div className="header__title">
+                        <Link to="/">
+                            {user.headerTitle}
+                        </Link>
+                    </div>
+                </Router>
                 <div className="header__menu">
                     <Image
                         onClick={() => {
@@ -29,7 +35,7 @@ const Header = () => {
                         src={HamburgerIcon}
                     />
                 </div>
-            </div>
+            </div >
 
             <Offcanvas
                 className="header__drawer"

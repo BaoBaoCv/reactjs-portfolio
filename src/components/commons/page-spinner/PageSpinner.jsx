@@ -1,12 +1,14 @@
 import React from "react";
-import { Spinner } from "react-bootstrap";
+import { PacmanLoader } from "react-spinners";
 
-import "./page-spinner.scss";
 const PageSpinner = () => {
+    const style = { position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)" };
     return (
-        <div className="spinner">
-            <Spinner className="spinner__spinner" animation="border" />
-            Loading
+        <div className="spinner" style={style}>
+            <PacmanLoader
+                size={30}
+                color={'#9b51e0'}
+            />
         </div>
     );
 };
