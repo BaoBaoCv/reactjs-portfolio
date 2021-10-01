@@ -13,5 +13,4 @@ export default defineConfig({
     server: {
         host: true,
     },
-    base: "/CV-React-Vipro/bao_bao_portfolio/",
 });

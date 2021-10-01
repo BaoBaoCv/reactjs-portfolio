@@ -15,7 +15,7 @@ const ProjectDetail = ({ location }) => {
     const project = location.state.project;
     useEffect(() => {
         const fetchData = async () => {
-            const data = await import(`../../../mock/${project.id}`);
+            const data = await import(`../../../mock/${project.id}.js`);
             setProjectDetail(data.default);
         };
         fetchData();

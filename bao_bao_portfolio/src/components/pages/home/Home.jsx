@@ -9,7 +9,7 @@ const Home = () => {
     const [userData, setUserData] = useState(null);
     useEffect(() => {
         const fetchData = async () => {
-            const { user } = await import("../../../mock/userData");
+            const { user } = await import("../../../mock/userData.js");
             setUserData(user);
         };
         fetchData();
