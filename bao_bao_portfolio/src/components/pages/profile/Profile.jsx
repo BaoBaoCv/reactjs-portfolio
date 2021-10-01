@@ -1,10 +1,11 @@
 import React from "react";
+import PageInform from "@/components/commons/page-inform/PageInform";
 
 import "./profile.scss";
 const Profile = () => {
     return (
         <div className="profile">
-            <div className="profile__content">Profile Content</div>
+            <PageInform />
         </div>
     );
 };

@@ -1,10 +1,11 @@
 import React from "react";
 
+import PageInform from "@/components/commons/page-inform/PageInform";
 import "./project-list.scss";
 const ProjectList = () => {
     return (
-        <div className="projectList">
-            <div className="projectList__content">Project List Content</div>
+        <div className="project-list">
+            <PageInform />
         </div>
     );
 };

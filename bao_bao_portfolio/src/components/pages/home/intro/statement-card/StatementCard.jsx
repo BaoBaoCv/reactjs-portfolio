@@ -3,12 +3,10 @@ import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
 import { motion } from "framer-motion";
 
 import "./statement-card.scss";
-const StatementCard = ({ className }) => {
+const StatementCard = ({ className, description }) => {
     return (
         <div className={`${className} statement-card`}>
-            <div className="statement-card__card">
-                "TOUCH “red”; “yellow; “green” TO PERFORM A MAGIC MOVES."
-            </div>
+            <div className="statement-card__card">{description}</div>
             <motion.img
                 className="statement-card__character"
                 src={

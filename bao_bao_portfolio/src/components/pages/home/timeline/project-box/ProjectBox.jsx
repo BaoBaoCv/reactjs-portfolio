@@ -1,20 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 import ProjectCard from "./project-card/ProjectCard";
 import decorIcon from "@/assets/images/project-link-icon.png";
+import { getMonthStr } from "@/constants";
 
 import "./project-box.scss";
-import { motion } from "framer-motion";
 
 const variants = {
     rotate: { rotate: [0, -30, 0], transition: { duration: 0.5 } },
     none: {},
 };
-const getMonthStr = (date) => {
-    return date.toLocaleString("default", { month: "long" });
-};
+
 const ProjectBox = ({ index, isHovered, setIsHovered, project }) => {
     return (
         <div className="project-box">
@@ -39,7 +38,12 @@ const ProjectBox = ({ index, isHovered, setIsHovered, project }) => {
                 </div>
                 <Link
                     className={"project-box__bottom-link"}
-                    to={"/projectDetail"}
+                    to={{
+                        pathname: "/projectDetail",
+                        state: {
+                            project: project,
+                        },
+                    }}
                 >
                     <motion.img
                         whileHover={{ scale: 1.05 }}

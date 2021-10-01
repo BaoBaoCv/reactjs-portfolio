@@ -22,4 +22,14 @@ const getRndInteger = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-export { PAGE_NAMES, ROUTE_PATHS, CHARACTER_IMAGES, getRndInteger };
+const getMonthStr = (date) => {
+    return date.toLocaleString("default", { month: "long" });
+};
+
+export {
+    PAGE_NAMES,
+    ROUTE_PATHS,
+    CHARACTER_IMAGES,
+    getRndInteger,
+    getMonthStr,
+};

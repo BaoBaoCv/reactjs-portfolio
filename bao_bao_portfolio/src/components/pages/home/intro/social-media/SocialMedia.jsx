@@ -1,12 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import {
     faFacebook,
     faLinkedin,
     faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { user } from "@/mock";
-library.add(faFacebook, faLinkedin, faInstagram);
 
 import React from "react";
 
@@ -18,7 +16,7 @@ const SocialMedia = () => {
         <div style={{ width: "100%", display: "flex" }}>
             <a href={user.facebookUrl}>
                 <FontAwesomeIcon
-                    icon={["fab", "facebook"]}
+                    icon={faFacebook}
                     className="fa-2x"
                     style={imageStyle}
                     color="white"
@@ -26,7 +24,7 @@ const SocialMedia = () => {
             </a>
             <a href={user.linkedInUrl}>
                 <FontAwesomeIcon
-                    icon={["fab", "linkedin"]}
+                    icon={faLinkedin}
                     className="fa-2x"
                     style={imageStyle}
                     color="white"
@@ -34,9 +32,10 @@ const SocialMedia = () => {
             </a>
             <a href={user.instagramUrl}>
                 <FontAwesomeIcon
-                    icon={["fab", "instagram"]}
+                    icon={faInstagram}
                     className="fa-2x"
                     style={imageStyle}
+                    color="white"
                 />
             </a>
         </div>

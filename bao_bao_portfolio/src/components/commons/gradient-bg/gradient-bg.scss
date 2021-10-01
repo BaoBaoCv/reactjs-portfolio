@@ -1,5 +1,6 @@
 @import "@/assets/styles/index.scss";
 .gradient-bg {
+    width: 100vw;
     &__dot {
         user-select: none;
         pointer-events: none;

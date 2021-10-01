@@ -14,6 +14,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     background-color: $background;
+    min-height: 100vh;
 
     font-family: "IBM Plex Mono", monospace;
     font-style: normal;

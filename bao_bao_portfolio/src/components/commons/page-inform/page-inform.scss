@@ -1,0 +1,15 @@
+@import "@/assets/styles/index.scss";
+
+.page-inform {
+    padding: 0 10vw;
+    margin-top: -30vh;
+    &__container {
+        position: relative;
+    }
+    &__character {
+        @include character-size;
+        position: absolute;
+        top: 10%;
+        left: -6%;
+    }
+}

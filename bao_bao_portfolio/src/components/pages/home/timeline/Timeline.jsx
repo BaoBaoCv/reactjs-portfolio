@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 
 import ProjectBox from "./project-box/ProjectBox";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
-import { user } from "@/mock";
 
 import "./timeline.scss";
 import "react-vertical-timeline-component/style.min.css";
@@ -22,7 +21,7 @@ const charaPostions = [
     "timeline__character-center",
 ];
 
-const Timeline = () => {
+const Timeline = ({ user }) => {
     const [isHovered, setIsHovered] = useState(
         user.timelineProjects.map((project) => {
             return false;

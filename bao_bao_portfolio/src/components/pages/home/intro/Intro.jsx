@@ -1,10 +1,8 @@
 import React from "react";
 import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
-import { user } from "@/mock";
 import "./intro.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import StatementCard from "./statement-card/Statementcard";
-import name from "@/assets/images/Name.png";
 import arrow from "@/assets/images/Arrow.svg";
 import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
 import { motion } from "framer-motion";
@@ -48,11 +46,11 @@ const columnForImageStyle = {
     justifyContent: "center",
 };
 
-const Intro = () => {
+const Intro = ({ user }) => {
     return (
         <Container className="intro__container">
             <Row>
-                <Col lg={{ span: 4 }} md={{ span: 12 }}>
+                <Col xl={{ span: 5 }}>
                     <div className="intro">
                         <RedYellowGreen />
                         <motion.div
@@ -69,7 +67,7 @@ const Intro = () => {
                                 width={"100%"}
                                 isFlexHorizontal={true}
                                 title={"String"}
-                                description={"Bao Dang Kim - Hello World"}
+                                description={user.introName}
                                 descriptionColor={"#FFE818"}
                             />
                         </motion.div>
@@ -85,9 +83,7 @@ const Intro = () => {
                                 className="intro__card"
                                 width={"100%"}
                                 title={"About"}
-                                description={
-                                    "CURRENTLY, I AM A WEB DEVELOPER & PROGRAMER WHO LOVES DOING THINGS WITH FRESH MINDS. PREVIOUSLY, I WORKED AS PROGRAMMER AT APPLE, SAMSUNG & XIAOMI. NOW I AM FREELANCER AND HAPPY TO SEE YOU. bjidjiowajdio awijd iowjadijawdj ijdiawjodanwjidna wmdnandionw adwadi naidnawi noa ndawiond iawndio"
-                                }
+                                description={user.introStatement}
                             />
                         </motion.div>
                         <motion.div
@@ -98,7 +94,10 @@ const Intro = () => {
                                 scale: 0.95,
                             }}
                         >
-                            <StatementCard className="intro__card" />
+                            <StatementCard
+                                className="intro__card"
+                                description={user.introSubStatement}
+                            />
                         </motion.div>
                         <SocialMedia />
                     </div>
@@ -112,7 +111,7 @@ const Intro = () => {
                             <div className="intro__character-container">
                                 <motion.img
                                     className="intro__character-avatar"
-                                    src={name}
+                                    src={user.introDecoration}
                                     animate={{
                                         x: 300,
                                         opacity: 1,

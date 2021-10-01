@@ -1,33 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Image, Row, Col } from "react-bootstrap";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
+import { getMonthStr } from "@/constants";
+
 import ProjectDescription from "./project-description/ProjectDescription";
 import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
 import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
-import placeholder_img from "@/assets/images/placeholder.jpg";
+import PageSpinner from "@/components/commons/page-spinner/PageSpinner";
 
 import "./project-detail.scss";
 import ImageWithTitle from "./ImageWithTitle";
-const ProjectDetail = () => {
-    return (
+const ProjectDetail = ({ location }) => {
+    const [projectDetail, setProjectDetail] = useState(null);
+    const project = location.state.project;
+    useEffect(() => {
+        const fetchData = async () => {
+            const data = await import(`../../../mock/${project.id}`);
+            setProjectDetail(data.default);
+        };
+        fetchData();
+    }, []);
+    return !projectDetail ? (
+        <PageSpinner />
+    ) : (
         <div className="project-detail">
             <div className="project-detail__intro project-detail__row">
                 <div className="project-detail__intro-name project-detail__intro-item">
-                    Android Application Robot
+                    {projectDetail.name}
                 </div>
                 <div className="project-detail__intro-date project-detail__intro-item">
                     <div className="project-detail__intro-title">Client</div>
                     <div className="project-detail__intro-detail">
-                        Google Inc
+                        {projectDetail.client}
                     </div>
                     <div className="project-detail__intro-title">
-                        2021, July 16
+                        {`${getMonthStr(project.date)}, ${
+                            project.date.getYear() + 1900
+                        }`}
                     </div>
                 </div>
                 <div className="project-detail__intro-role project-detail__intro-item">
                     <div className="project-detail__intro-title">Role</div>
                     <div className="project-detail__intro-detail">
-                        Developer
+                        {projectDetail.role}
                     </div>
                 </div>
             </div>
@@ -43,50 +58,58 @@ const ProjectDetail = () => {
             </div>
             <ProjectDescription
                 className="project-detail__row"
-                title={"Overview"}
-                isTwoCols={true}
-                col1={
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                title={projectDetail.description1.title}
+                isTwoCols={projectDetail.description1.contents.length === 2}
+                col1={projectDetail.description1.contents[0]}
+                col2={
+                    projectDetail.description1.contents.length === 2
+                        ? projectDetail.description1.contents[1]
+                        : ""
                 }
-                col2={`discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \n
-                "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
-                of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section`}
             />
             <ImageWithTitle
                 className="project-detail__images project-detail__row"
-                src1={placeholder_img}
-                description1={"this is just an image"}
-                numberOfImage={2}
-                src2={placeholder_img}
-                description2={"dcm"}
+                src1={projectDetail.images[0].image}
+                description1={projectDetail.images[0].description}
+                numberOfImage={projectDetail.images.length}
+                src2={
+                    projectDetail.images.length === 2
+                        ? projectDetail.images[1].image
+                        : null
+                }
+                description2={
+                    projectDetail.images.length === 2
+                        ? projectDetail.images[1].description
+                        : ""
+                }
             />
             <ProjectDescription
                 className="project-detail__row"
                 title={"Ideation"}
-                col1={
-                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\n It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                isTwoCols={projectDetail.description2.contents.length === 2}
+                col1={projectDetail.description2.contents[0]}
+                col2={
+                    projectDetail.description2.contents.length === 2
+                        ? projectDetail.description2.contents[1]
+                        : ""
                 }
             />
             <div className="project-detail__separator project-detail__row" />
             <div className="project-detail__meta-data project-detail__row">
                 <DescriptionCard
-                    title={"credit"}
-                    description={
-                        "FEATURING BAO DANG KIM, HOANG VAN THIEN, DINH QUY TRI THONG, TRAN MINH THU, BUI NGUYEN MAI TRUC, BAO PHAM."
-                    }
+                    title={projectDetail.card1.title}
+                    description={projectDetail.card1.detail}
                     className="meta-data-item"
                 ></DescriptionCard>
                 <DescriptionCard
-                    title={"open link"}
-                    description={
-                        "YOU CAN WATCH MORE ABOUT THE PROJECT VIA: YOUTUBE, GOOGLE, VNEXPRESS"
-                    }
+                    title={projectDetail.card2.title}
+                    description={projectDetail.card2.detail}
                     className="meta-data-item"
                 ></DescriptionCard>
                 <div className="project-detail__meta-data-tags meta-data-item">
-                    <ProjectCategoryTag data="java" />
-                    <ProjectCategoryTag data="ui/ux" />
-                    <ProjectCategoryTag data="computer" />
+                    {project.tags.map((tag) => (
+                        <ProjectCategoryTag data={tag} />
+                    ))}
                 </div>
             </div>
         </div>
