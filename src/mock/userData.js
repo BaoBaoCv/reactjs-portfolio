@@ -38,7 +38,7 @@ const baoKim = {
         },
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
-            tags: ["java", "ui_ux", "backend"],
+            tags: ["java", "ui_ux", "backend", "buscu"],
             isYearHidden: true,
             date: new Date(2020, 5),
             company: "Google Inc.",
@@ -48,8 +48,8 @@ const baoKim = {
         {
             name: "ten_ung_dung_thu_nghiem_gpl",
             tags: ["java", "ui_ux", "backend"],
-            isYearHidden: true,
-            date: new Date(2020, 5),
+            isYearHidden: false,
+            date: new Date(2021, 8),
             company: "Net Comp.",
             role: "senior developer",
             id: "bao-kim/4",

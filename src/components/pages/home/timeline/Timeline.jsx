@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 import ProjectBox from "./project-box/ProjectBox";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
+import { getMonthStr } from "@/constants";
 
 import "./timeline.scss";
 import "react-vertical-timeline-component/style.min.css";
@@ -57,9 +58,9 @@ const Timeline = ({ user }) => {
                         iconStyle={
                             project.isYearHidden
                                 ? {
-                                      width: "0",
-                                      height: "0",
-                                  }
+                                    width: "0",
+                                    height: "0",
+                                }
                                 : {}
                         }
                         icon={
@@ -69,13 +70,12 @@ const Timeline = ({ user }) => {
                                 className="timeline__date"
                             >
                                 <div
-                                    className={`timeline__date-year ${
-                                        project.isYearHidden ? "hidden" : ""
-                                    }`}
+                                    className={`timeline__date-year ${project.isYearHidden ? "hidden" : ""
+                                        }`}
                                 >
-                                    2021
+                                    {`${project.date.getYear() + 1900}`}
                                 </div>
-                                <div className="timeline__date-month">JUL</div>
+                                <div className="timeline__date-month">{`${getMonthStr(project.date).toUpperCase()}`}</div>
                             </motion.div>
                         }
                     >
@@ -101,7 +101,7 @@ const Timeline = ({ user }) => {
                                 }}
                             >
                                 {characters[index].position ==
-                                "timeline__character-left" ? (
+                                    "timeline__character-left" ? (
                                     <motion.img
                                         drag
                                         dragConstraints={{

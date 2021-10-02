@@ -23,7 +23,7 @@ const getRndInteger = (min, max) => {
 };
 
 const getMonthStr = (date) => {
-    return date.toLocaleString("default", { month: "long" });
+    return date.toLocaleString("default", { month: "long" }).substring(0, 3);
 };
 
 export {
