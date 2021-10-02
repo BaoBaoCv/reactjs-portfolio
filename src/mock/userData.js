@@ -54,6 +54,15 @@ const baoKim = {
             role: "senior developer",
             id: "bao-kim/4",
         },
+        {
+            name: "sample_project",
+            tags: ["java", "ui_ux", "backend", "provcl"],
+            isYearHidden: false,
+            date: new Date(2021, 11),
+            company: "WFH.",
+            role: "senior developer",
+            id: "bao-kim/sample",
+        },
     ],
 };
 

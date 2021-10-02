@@ -1,14 +1,18 @@
 import React from "react";
 import "./project-description.scss";
-const ProjectDescription = ({ className, title, col1, col2, isTwoCols }) => {
+const ProjectDescription = ({ title, col1, col2 }) => {
+    let isTwoCols;
     let paraClassName;
-    if (!isTwoCols) {
+    if (col2 === undefined) {
         paraClassName = "one-col";
+        isTwoCols = false;
     } else {
         paraClassName = "two-col";
+        isTwoCols = true;
+        console.log(col2)
     }
     return (
-        <div className={`project-description ${className}`}>
+        <div className={`project-description project-detail__row`}>
             <div className="project-description__title-container">
                 <div className="project-description__title project-description__item">
                     {title}

@@ -22,6 +22,7 @@ const ProjectDetail = ({ location }) => {
                 `../../../mock/${root}/projects/${id}.js`
             );
             setProjectDetail(data.default);
+            console.log(project)
         };
         fetchData();
     }, []);
@@ -60,56 +61,34 @@ const ProjectDetail = ({ location }) => {
                     }
                 />
             </div>
-            <ProjectDescription
-                className="project-detail__row"
-                title={projectDetail.description1.title}
-                isTwoCols={projectDetail.description1.contents.length === 2}
-                col1={projectDetail.description1.contents[0]}
-                col2={
-                    projectDetail.description1.contents.length === 2
-                        ? projectDetail.description1.contents[1]
-                        : ""
+            {projectDetail.contents.map((component) => {
+                if (component.component === "ProjectDescription") {
+                    return <ProjectDescription
+                        title={component.title}
+                        col1={component.col1}
+                        col2={component.col2}
+                    />
+                } else if (component.component === "ImageWithTitle") {
+                    return <ImageWithTitle
+                        src1={component.src1}
+                        src2={component.src2}
+                        description1={component.description1}
+                        description2={component.description2}
+                    />
                 }
-            />
-            <ImageWithTitle
-                className="project-detail__images project-detail__row"
-                src1={projectDetail.images[0].image}
-                description1={projectDetail.images[0].description}
-                numberOfImage={projectDetail.images.length}
-                src2={
-                    projectDetail.images.length === 2
-                        ? projectDetail.images[1].image
-                        : null
-                }
-                description2={
-                    projectDetail.images.length === 2
-                        ? projectDetail.images[1].description
-                        : ""
-                }
-            />
-            <ProjectDescription
-                className="project-detail__row"
-                title={"Ideation"}
-                isTwoCols={projectDetail.description2.contents.length === 2}
-                col1={projectDetail.description2.contents[0]}
-                col2={
-                    projectDetail.description2.contents.length === 2
-                        ? projectDetail.description2.contents[1]
-                        : ""
-                }
-            />
+            })}
             <div className="project-detail__separator project-detail__row" />
             <div className="project-detail__meta-data project-detail__row">
-                <DescriptionCard
+                {projectDetail.card1 && (<DescriptionCard
                     title={projectDetail.card1.title}
                     description={projectDetail.card1.detail}
                     className="meta-data-item"
-                ></DescriptionCard>
-                <DescriptionCard
+                ></DescriptionCard>)}
+                {projectDetail.card2 && (<DescriptionCard
                     title={projectDetail.card2.title}
                     description={projectDetail.card2.detail}
                     className="meta-data-item"
-                ></DescriptionCard>
+                ></DescriptionCard>)}
                 <div className="project-detail__meta-data-tags meta-data-item">
                     {project.tags.map((tag) => (
                         <ProjectCategoryTag data={tag} />
