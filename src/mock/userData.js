@@ -2,7 +2,7 @@ import BaoPhamDecor from "@/mock/bao-pham/images/intro-decoration.png";
 import BaoKimDecor from "@/mock/bao-kim/images/intro-decoration.png";
 
 const baoKim = {
-    headerTitle: "bao_kim/portfolio",
+    headerTitle: "dkb/portfolio",
 
     introName: "Dang Kim Bao - hello world",
     introStatement:
