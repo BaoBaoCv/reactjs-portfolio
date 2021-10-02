@@ -3,8 +3,9 @@ import Home from "@/components/pages/home/Home";
 import ProjectDetail from "@/components/pages/project-detail/ProjectDetail";
 import ProjectList from "@/components/pages/project-list/ProjectList";
 import Profile from "@/components/pages/profile/Profile";
+import Motivation from "@/components/pages/motivation/Motivation";
 import homeIcon from "@/assets/images/home-icon.png";
-import projectListIcon from "@/assets/images/project-list-icon.png";
+import motivationIcon from "@/assets/images/project-list-icon.png";
 import profileIcon from "@/assets/images/profile-icon.png";
 
 const routes = [
@@ -23,10 +24,10 @@ const routes = [
         isShowOnNavBar: false,
     },
     {
-        name: PAGE_NAMES.PROJECT_LIST,
-        path: ROUTE_PATHS[PAGE_NAMES.PROJECT_LIST],
-        component: ProjectList,
-        icon: projectListIcon,
+        name: PAGE_NAMES.MOTIVATION,
+        path: ROUTE_PATHS[PAGE_NAMES.MOTIVATION],
+        component: Motivation,
+        icon: motivationIcon,
         detail: "PROJECT LIST IN SHORT & NARROW VIEW",
         isShowOnNavBar: true,
     },

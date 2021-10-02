@@ -7,9 +7,10 @@ import ProjectDescription from "./project-description/ProjectDescription";
 import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
 import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
 import PageSpinner from "@/components/commons/page-spinner/PageSpinner";
+import ImageWithTitle from "./ImageWithTitle";
 
 import "./project-detail.scss";
-import ImageWithTitle from "./ImageWithTitle";
+
 const ProjectDetail = ({ location }) => {
     const [projectDetail, setProjectDetail] = useState(null);
     const project = location.state.project;
@@ -38,9 +39,8 @@ const ProjectDetail = ({ location }) => {
                         {projectDetail.client}
                     </div>
                     <div className="project-detail__intro-title">
-                        {`${getMonthStr(project.date)}, ${
-                            project.date.getYear() + 1900
-                        }`}
+                        {`${getMonthStr(project.date)}, ${project.date.getYear() + 1900
+                            }`}
                     </div>
                 </div>
                 <div className="project-detail__intro-role project-detail__intro-item">
@@ -55,7 +55,7 @@ const ProjectDetail = ({ location }) => {
                     className="project-detail__cover-character"
                     src={
                         CHARACTER_IMAGES[
-                            getRndInteger(0, CHARACTER_IMAGES.length - 1)
+                        getRndInteger(0, CHARACTER_IMAGES.length - 1)
                         ]
                     }
                 />

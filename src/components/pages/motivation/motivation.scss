@@ -1,0 +1,18 @@
+@import "@/assets/styles/index.scss";
+
+.motivation{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100vh;
+    text-align: center;
+    h1{
+        color: $accent-green
+    }
+    p{
+        white-space: pre-line;
+    }
+}

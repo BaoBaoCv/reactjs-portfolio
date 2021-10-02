@@ -41,6 +41,9 @@
             background-color: $drawer-background;
             &-end {
                 min-width: 537px;
+                @media (max-width: $tablet-min - 1) {
+                    width: 100% !important;
+                }
             }
         }
         &-item {
@@ -79,7 +82,7 @@
         &-home {
             color: #ff702f;
         }
-        &-projectList {
+        &-motivation {
             color: #ffe818;
         }
         &-profile {

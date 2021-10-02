@@ -5,14 +5,14 @@ import character2 from "@/assets/images/character3.svg";
 const PAGE_NAMES = {
     HOME: "home",
     PROJECT_DETAIL: "projectDetail",
-    PROJECT_LIST: "projectList",
+    MOTIVATION: "motivation",
     PROFILE: "profile",
 };
 
 const ROUTE_PATHS = {
     [PAGE_NAMES.HOME]: "/",
     [PAGE_NAMES.PROJECT_DETAIL]: "/projectDetail",
-    [PAGE_NAMES.PROJECT_LIST]: "/projectsList",
+    [PAGE_NAMES.MOTIVATION]: "/motivation",
     [PAGE_NAMES.PROFILE]: "/profile",
 };
 
