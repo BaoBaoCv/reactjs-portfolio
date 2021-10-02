@@ -1,4 +1,5 @@
 import placeholder from "@/mock/bao-kim/images/placeholder.jpg";
+import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
 
 export default {
     name: "Android Application Robot",
@@ -21,8 +22,12 @@ export default {
         },
         {
             component: "ImageWithTitle",
-            src1: placeholder,
-            src2: placeholder,
+            src1: PIXEL_ARTS[
+                getRndInteger(0, PIXEL_ARTS.length - 1)
+            ],
+            src2: PIXEL_ARTS[
+                getRndInteger(0, PIXEL_ARTS.length - 1)
+            ],
             description1: "desc1",
             description2: "desc2",
         },

@@ -57,15 +57,19 @@ $page-width: 90%;
     &__cover {
         position: relative;
         width: $page-width;
-        height: 300px;
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        height: 50vh;
+        border: 2px solid $primary-color;
         box-sizing: border-box;
         border-radius: 4px;
+        text-align: center;
         &-character {
             @include character-size;
             position: absolute;
             left: -3%;
             top: 10%;
+        }
+        p{
+            color: $dark_green
         }
     }
 
@@ -79,12 +83,27 @@ $page-width: 90%;
             box-sizing: border-box;
             border-radius: 4px;
             text-align: center;
+            height: 50vh;
             &:not(:last-child) {
                 margin-right: 30px;
             }
             img {
                 width: 100%;
+                height: 100%;
+                object-fit: contain;
+                @media (max-width: $tablet-min - 1){
+                    height: auto;
+                }
             }
+            @media (max-width: $tablet-min - 1){
+                height: auto;
+            }
+        }
+        &-header{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+
         }
     }
 

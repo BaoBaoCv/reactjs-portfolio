@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Image, Row, Col } from "react-bootstrap";
-import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
+import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
 import { getMonthStr } from "@/constants";
 
 import ProjectDescription from "./project-description/ProjectDescription";
@@ -52,14 +52,16 @@ const ProjectDetail = ({ location }) => {
                 </div>
             </div>
             <div className="project-detail__cover project-detail__row">
-                <Image
-                    className="project-detail__cover-character"
+                <img
+                    // className="project-detail__cover-character"
+                    className="project-detail__images-header"
                     src={
-                        CHARACTER_IMAGES[
-                        getRndInteger(0, CHARACTER_IMAGES.length - 1)
+                        PIXEL_ARTS[
+                        getRndInteger(0, PIXEL_ARTS.length - 1)
                         ]
                     }
                 />
+                <p>Source: https://jefflin276.wixsite.com/pixeljeff</p>
             </div>
             {projectDetail.contents.map((component) => {
                 if (component.component === "ProjectDescription") {
