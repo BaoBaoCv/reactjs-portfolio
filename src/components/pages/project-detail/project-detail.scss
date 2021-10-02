@@ -62,6 +62,7 @@ $page-width: 90%;
         box-sizing: border-box;
         border-radius: 4px;
         text-align: center;
+        margin-bottom: 16px;
         &-character {
             @include character-size;
             position: absolute;
@@ -78,6 +79,10 @@ $page-width: 90%;
         justify-content: center;
         align-items: center;
         width: $page-width;
+        margin-bottom: 16px;
+        @media (max-width: $tablet-min - 1){
+            margin-bottom: -40px;
+        }
         &-box {
             width: 50%;
             box-sizing: border-box;
