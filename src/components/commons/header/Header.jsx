@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useHistory, BrowserRouter as Router } from "react-router-dom";
+import { Link, useHistory, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Button, Image, Offcanvas } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { routes } from "@/configs";
@@ -7,6 +7,7 @@ import { user } from "@/mock/userData";
 import BackHome from "@/assets/images/back-home.svg";
 import HamburgerIcon from "@/assets/images/hamburger.svg";
 import "./header.scss";
+import Home from "@/components/pages/home/Home";
 
 const Header = () => {
     const [show, setShow] = useState(false);
@@ -16,9 +17,9 @@ const Header = () => {
             <div className="header">
                 <Router>
                     <div className="header__title">
-                        <Link to="/">
+                        <a href="/" >
                             {user.headerTitle}
-                        </Link>
+                        </a>
                     </div>
                 </Router>
                 <div className="header__menu">
