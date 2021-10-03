@@ -11,6 +11,7 @@ import pixelArt7 from "@/assets/images/pixelArt7.gif"
 import pixelArt8 from "@/assets/images/pixelArt8.gif"
 import pixelArt9 from "@/assets/images/pixelArt9.gif"
 import pixelArt10 from "@/assets/images/pixelArt10.gif"
+import pixelArt11 from "@/assets/images/pixelArt11.gif"
 
 const PAGE_NAMES = {
     HOME: "home",
@@ -26,7 +27,7 @@ const ROUTE_PATHS = {
     [PAGE_NAMES.PROFILE]: "/profile",
 };
 
-const PIXEL_ARTS = [pixelArt1, pixelArt2, pixelArt3, pixelArt4, pixelArt5, pixelArt6, pixelArt7, pixelArt8, pixelArt9, pixelArt10]
+const PIXEL_ARTS = [pixelArt1, pixelArt2, pixelArt3, pixelArt4, pixelArt5, pixelArt6, pixelArt7, pixelArt8, pixelArt9, pixelArt10, pixelArt11]
 
 const CHARACTER_IMAGES = [character1, character2, character3];
 
