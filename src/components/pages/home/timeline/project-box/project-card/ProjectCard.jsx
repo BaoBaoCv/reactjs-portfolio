@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
 import { motion } from "framer-motion";
 import "./project-card.scss";

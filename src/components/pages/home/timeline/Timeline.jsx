@@ -7,8 +7,12 @@ import { Col, Row } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 import ProjectBox from "./project-box/ProjectBox";
-import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
-import { getMonthStr, getRndIntegerAfterOccurence, PIXEL_ARTS } from "@/constants";
+import {
+    CHARACTER_IMAGES,
+    PIXEL_ARTS,
+    getRndInteger,
+    getMonthStr,
+} from "@/constants";
 
 import "./timeline.scss";
 import "react-vertical-timeline-component/style.min.css";
@@ -23,15 +27,6 @@ const charaPostions = [
 ];
 
 const Timeline = ({ user }) => {
-    let temptArr = getRndIntegerAfterOccurence(10);
-    const popAndGenerateNewArr = () => {
-        if (temptArr.length === 0) {
-            temptArr.getRndIntegerAfterOccurence(10);
-        }
-        else {
-            return temptArr.pop();
-        }
-    }
     const [isHovered, setIsHovered] = useState(
         user.timelineProjects.map((project) => {
             return false;
@@ -46,6 +41,11 @@ const Timeline = ({ user }) => {
                 position:
                     charaPostions[getRndInteger(0, charaPostions.length - 1)],
             };
+        })
+    );
+    const [pixelImages, setPixelImages] = useState(
+        user.timelineProjects.map((project, index) => {
+            return PIXEL_ARTS[index % PIXEL_ARTS.length];
         })
     );
     return (
@@ -67,9 +67,9 @@ const Timeline = ({ user }) => {
                         iconStyle={
                             project.isYearHidden
                                 ? {
-                                    width: "0",
-                                    height: "0",
-                                }
+                                      width: "0",
+                                      height: "0",
+                                  }
                                 : {}
                         }
                         icon={
@@ -79,12 +79,15 @@ const Timeline = ({ user }) => {
                                 className="timeline__date"
                             >
                                 <div
-                                    className={`timeline__date-year ${project.isYearHidden ? "hidden" : ""
-                                        }`}
+                                    className={`timeline__date-year ${
+                                        project.isYearHidden ? "hidden" : ""
+                                    }`}
                                 >
                                     {`${project.date.getYear() + 1900}`}
                                 </div>
-                                <div className="timeline__date-month">{`${getMonthStr(project.date).toUpperCase()}`}</div>
+                                <div className="timeline__date-month">{`${getMonthStr(
+                                    project.date
+                                ).toUpperCase()}`}</div>
                             </motion.div>
                         }
                     >
@@ -95,13 +98,12 @@ const Timeline = ({ user }) => {
                                     span: 6,
                                 }}
                             >
-
                                 <ProjectBox
                                     index={index}
                                     isHovered={isHovered}
                                     setIsHovered={setIsHovered}
                                     project={project}
-                                    src={PIXEL_ARTS[popAndGenerateNewArr()]}
+                                    src={pixelImages[index]}
                                 />
                             </Col>
                             <Col
@@ -112,7 +114,7 @@ const Timeline = ({ user }) => {
                                 }}
                             >
                                 {characters[index].position ==
-                                    "timeline__character-left" ? (
+                                "timeline__character-left" ? (
                                     <motion.img
                                         drag
                                         dragConstraints={{
