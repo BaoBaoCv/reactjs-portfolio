@@ -27,8 +27,9 @@ const charaPostions = [
     "timeline__character-center",
 ];
 
-const Timeline = ({ user }) => {
+const Timeline = ({ user, timelineType }) => {
     const [temptArr, setTemptArr] = useState(getRndIntegerAfterOccurence(PIXEL_ARTS.length));
+    const project = timelineType
     const popAndGenerateNewArr = () => {
         if (temptArr.length === 0) {
             setTemptArr(getRndIntegerAfterOccurence(10));
@@ -38,12 +39,12 @@ const Timeline = ({ user }) => {
         }
     }
     const [isHovered, setIsHovered] = useState(
-        user.timelineProjects.map((project) => {
+        project.timelineProjects.map((project) => {
             return false;
         })
     );
     const [characters, setCharacters] = useState(
-        user.timelineProjects.map((project) => {
+        project.timelineProjects.map((project) => {
             return {
                 img: CHARACTER_IMAGES[
                     getRndInteger(0, CHARACTER_IMAGES.length - 1)
@@ -54,7 +55,7 @@ const Timeline = ({ user }) => {
         })
     );
     const [pixelImages, setPixelImages] = useState(
-        user.timelineProjects.map((project, index) => {
+        project.timelineProjects.map((project, index) => {
             return PIXEL_ARTS[popAndGenerateNewArr()];
         })
     );
@@ -62,16 +63,16 @@ const Timeline = ({ user }) => {
         <div className="timeline">
             <div className="timeline__subtitle">
                 <div className="timeline__subtitle-year">
-                    {user.timelineStartYear}
+                    {project.timelineStartYear}
                 </div>
                 <div className="timeline__subtitle-line" />
                 <div className="timeline__subtitle-year">
-                    {user.timelineEndYear}
+                    {project.timelineEndYear}
                 </div>
             </div>
-            <div className="timeline__title">{user.timelineTitle}</div>
+            <div className="timeline__title">{project.timelineTitle}</div>
             <VerticalTimeline animate={true} layout="1-column-left">
-                {user.timelineProjects.map((project, index) => (
+                {project.timelineProjects.map((project, index) => (
                     <VerticalTimelineElement
                         key={project.name}
                         iconStyle={

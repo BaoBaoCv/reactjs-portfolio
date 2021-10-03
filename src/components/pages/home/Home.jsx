@@ -20,7 +20,8 @@ const Home = () => {
     ) : (
         <div className="home">
             <Intro user={userData} />
-            <Timeline user={userData} />
+            <Timeline user={userData} timelineType={userData.projects} />
+            <Timeline user={userData} timelineType={userData.achievements} />
         </div>
     );
 };

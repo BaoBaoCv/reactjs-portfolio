@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Image, Row, Col } from "react-bootstrap";
-import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
+import { getRndInteger, PIXEL_ARTS } from "@/constants";
 import { getMonthStr } from "@/constants";
 
 import ProjectDescription from "./project-description/ProjectDescription";

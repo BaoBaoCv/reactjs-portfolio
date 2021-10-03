@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faFacebook,
     faLinkedin,
-    faInstagram,
+    faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { user } from "@/mock";
 
@@ -29,9 +29,9 @@ const SocialMedia = () => {
                     color="white"
                 />
             </a>
-            <a href={user.instagramUrl}>
+            <a href={user.githubUrl}>
                 <FontAwesomeIcon
-                    icon={faInstagram}
+                    icon={faGithub}
                     className="fa-2x"
                     style={imageStyle}
                     color="white"

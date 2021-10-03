@@ -1,13 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Image } from "react-bootstrap";
 import {
     faFacebook,
     faLinkedin,
     faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import { user } from "@/mock";
 
-import baoPhamAvt from "@/assets/images/bao-pham-avt.jpg";
 import "./footer.scss";
 const Footer = () => {
     return (
@@ -23,22 +22,27 @@ const Footer = () => {
                 </div>
             </div>
             <div className="footer__dev item">
-                <FontAwesomeIcon
-                    icon={faFacebook}
-                    className="fa-2x"
-                    color="white"
-                />
-                <FontAwesomeIcon
-                    icon={faLinkedin}
-                    className="fa-2x"
-                    color="white"
-                />
-                <FontAwesomeIcon
-                    icon={faGithub}
-                    className="fa-2x"
-                    color="white"
-                />
-
+                <a href={user.facebookUrl}>
+                    <FontAwesomeIcon
+                        icon={faFacebook}
+                        className="fa-2x"
+                        color="white"
+                    />
+                </a>
+                <a href={user.linkedInUrl}>
+                    <FontAwesomeIcon
+                        icon={faLinkedin}
+                        className="fa-2x"
+                        color="white"
+                    />
+                </a>
+                <a href={user.githubUrl}>
+                    <FontAwesomeIcon
+                        icon={faGithub}
+                        className="fa-2x"
+                        color="white"
+                    />
+                </a>
             </div>
         </div>
     );
