@@ -61,7 +61,7 @@ const ProjectDetail = ({ location }) => {
                         ]
                     }
                 />
-                <p>Source: https://jefflin276.wixsite.com/pixeljeff</p>
+                <a href="https://jefflin276.wixsite.com/pixeljeff">Source: Pixel Jeff</a>
             </div>
             {projectDetail.contents.map((component) => {
                 if (component.component === "ProjectDescription") {

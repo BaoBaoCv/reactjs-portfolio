@@ -69,8 +69,9 @@ $page-width: 90%;
             left: -3%;
             top: 10%;
         }
-        p{
-            color: $dark_green
+        a{
+            color: $dark_green;
+            text-decoration: none;
         }
     }
 
