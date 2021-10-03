@@ -22,6 +22,7 @@
     &__description {
         color: #ffffff;
         text-transform: uppercase;
+        white-space: pre-line;
     }
 
     @media (max-width: $tablet-min - 1) {
