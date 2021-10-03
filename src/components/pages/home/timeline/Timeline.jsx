@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 import ProjectBox from "./project-box/ProjectBox";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
-import { getMonthStr } from "@/constants";
+import { getMonthStr, getRndIntegerAfterOccurence, PIXEL_ARTS } from "@/constants";
 
 import "./timeline.scss";
 import "react-vertical-timeline-component/style.min.css";
@@ -23,6 +23,15 @@ const charaPostions = [
 ];
 
 const Timeline = ({ user }) => {
+    let temptArr = getRndIntegerAfterOccurence(10);
+    const popAndGenerateNewArr = () => {
+        if (temptArr.length === 0) {
+            temptArr.getRndIntegerAfterOccurence(10);
+        }
+        else {
+            return temptArr.pop();
+        }
+    }
     const [isHovered, setIsHovered] = useState(
         user.timelineProjects.map((project) => {
             return false;
@@ -86,11 +95,13 @@ const Timeline = ({ user }) => {
                                     span: 6,
                                 }}
                             >
+
                                 <ProjectBox
                                     index={index}
                                     isHovered={isHovered}
                                     setIsHovered={setIsHovered}
                                     project={project}
+                                    src={PIXEL_ARTS[popAndGenerateNewArr()]}
                                 />
                             </Col>
                             <Col

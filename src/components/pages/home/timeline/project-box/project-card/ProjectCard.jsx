@@ -2,7 +2,9 @@ import React from "react";
 import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
 import { motion } from "framer-motion";
 import "./project-card.scss";
-const ProjectCard = ({ index, setIsHovered, project }) => {
+import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
+
+const ProjectCard = ({ index, setIsHovered, project, src }) => {
     return (
         <motion.div
             className="project-card"
@@ -27,7 +29,9 @@ const ProjectCard = ({ index, setIsHovered, project }) => {
                     <ProjectCategoryTag key={tag} data={tag} />
                 ))}
             </div>
-            <div className="project-card__img"></div>
+            <div className="project-card__img">
+                <img src={src} />
+            </div>
             <div className="project-card__name-card">
                 <div className="project-card__name-card-name">NAME</div>
                 <div className="project-card__name-card-detail">

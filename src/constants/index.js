@@ -34,6 +34,29 @@ const getRndInteger = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
+const shuffle = (array) => {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex != 0) {
+
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+    return array;
+}
+
+const getRndIntegerAfterOccurence = (arrayLength) => {
+    let temptArr = [];
+    for (let i = 0; i < arrayLength; i++) {
+        temptArr.push(i);
+    }
+    shuffle(temptArr);
+    return temptArr;
+}
+
 const getMonthStr = (date) => {
     return date.toLocaleString("default", { month: "long" }).substring(0, 3);
 };
@@ -44,5 +67,7 @@ export {
     CHARACTER_IMAGES,
     getRndInteger,
     getMonthStr,
-    PIXEL_ARTS
+    PIXEL_ARTS,
+    getRndIntegerAfterOccurence,
+    shuffle
 };

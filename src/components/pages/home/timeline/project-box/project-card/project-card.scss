@@ -30,6 +30,13 @@ $ratio-width-to-height: 1.267;
     &__img {
         height: 75%;
         width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        img{
+            width: 100%;
+            max-height: 100%;
+        }
     }
 
     &__name-card {

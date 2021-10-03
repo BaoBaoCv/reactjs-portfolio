@@ -14,13 +14,14 @@ const variants = {
     none: {},
 };
 
-const ProjectBox = ({ index, isHovered, setIsHovered, project }) => {
+const ProjectBox = ({ index, isHovered, setIsHovered, project, src }) => {
     return (
         <div className="project-box">
             <ProjectCard
                 index={index}
                 setIsHovered={setIsHovered}
                 project={project}
+                src={src}
             />
             <div className="project-box__bottom">
                 <div className="project-box__bottom-detail">
