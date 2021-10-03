@@ -37,7 +37,6 @@ const genGradientDots = (fullPageHeight, windowHeight) => {
     }
     return dots;
 };
-let isFirstRender = true;
 
 const GradientBg = () => {
     let history = useHistory();
@@ -66,10 +65,6 @@ const GradientBg = () => {
     }, []);
 
     useEffect(() => {
-        if (isFirstRender) {
-            isFirstRender = false;
-            return;
-        }
         const timerId = setTimeout(() => {
             setGradientDots(
                 genGradientDots(
