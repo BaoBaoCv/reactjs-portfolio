@@ -1,34 +1,32 @@
-import placeholder from "@/mock/bao-kim/images/placeholder.jpg";
+import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
+import germany from "@/assets/images/lecture-germany.jpg";
 
 export default {
-    name: "Android Application Robot",
-    client: "Google Inc",
+    name: "Games simulating on Minecraft",
+    client: "School subject",
     role: "Developer",
-    description1: {
-        title: "Overview",
-        contents: [
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-            "discovered the undoubtable source.Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \n de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section",
-        ],
-    },
-    images: [
+    contents: [
         {
-            image: placeholder,
-            description: "This is just an image",
+            component: "ProjectDescription",
+            title: "GOAL & TEAM STRUCTURE",
+            col1: `Propose a full solution for a E-bike booking application`,
+            col2: `Team of 4, including 2 Vietnamese, and 2 from other countries`
+        },
+        {
+            component: "ProjectDescription",
+            title: "EXPERIENCE",
+            col1: `This is also one of the unforgettable projects during my university period. 
+            For this project, our goal is to propose a fully functional architecture for a bike booking application (like E-scooter in European countries). This was memorable because this is the first time I had a chance to work with other members outside Vietnam. This project was a part of a subject in our University, to get all of the students the idea of how a project is proposed, let us have an opportunity to think about the overall architecture, and to get us a brief idea what is Agile/Scrum is and how it is operated.
+            `,
+        },
+        {
+            component: "ImageWithTitle",
+            src1: germany,
+            description1: "A lecture in Frankfurt UAS",
         },
     ],
-    description2: {
-        title: "Overview",
-        contents: [
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\n It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-        ],
-    },
     card1: {
         title: "Credit",
-        detail: "FEATURING BAO DANG KIM, HOANG VAN THIEN, DINH QUY TRI THONG, TRAN MINH THU, BUI NGUYEN MAI TRUC, BAO PHAM.",
-    },
-    card2: {
-        title: "Open Link",
-        detail: "YOU CAN WATCH MORE ABOUT THE PROJECT VIA: YOUTUBE, GOOGLE, VNEXPRESS",
+        detail: "FEATURING BAO DANG KIM, BAO PHAM, NGO MINH THONG, TRUONG MINH HIEU.",
     },
 };

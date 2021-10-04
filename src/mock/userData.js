@@ -126,7 +126,7 @@ const baoKim = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "STUDENT",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/daad",
                 },
             ],
         },
