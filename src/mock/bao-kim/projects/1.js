@@ -5,8 +5,6 @@ export default {
     name: "Games simulating on Minecraft",
     client: "School subject",
     role: "Developer",
-    date: new Date(2018, 1),
-    tags: ["python", "backend"],
     contents: [
         {
             component: "ProjectDescription",
