@@ -28,7 +28,7 @@ const baoKim = {
                     date: new Date(2018, 1),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/1",
+                    id: "bao-kim/sample",
                 },
                 {
                     name: "Bike booking application",

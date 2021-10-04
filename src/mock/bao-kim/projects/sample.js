@@ -32,6 +32,11 @@ export default {
             description2: "desc2",
         },
         {
+            component: "VideoWithTitle",
+            src: `https://www.youtube.com/watch?v=AgFeZr5ptV8&list=RDAgFeZr5ptV8&start_radio=1`,
+            description: `First`
+        },
+        {
             component: "ProjectDescription",
             title: "Overview",
             col1: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 

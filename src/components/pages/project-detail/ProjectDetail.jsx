@@ -7,6 +7,7 @@ import DescriptionCard from "@/components/commons/description-card/DescriptionCa
 import ProjectCategoryTag from "@/components/commons/project-category-tag/ProjectCategoryTag";
 import PageSpinner from "@/components/commons/page-spinner/PageSpinner";
 import ImageWithTitle from "./ImageWithTitle";
+import VideoWithTitle from "./VideoWithTitle";
 
 import "./project-detail.scss";
 
@@ -76,6 +77,10 @@ const ProjectDetail = ({ location }) => {
                         description1={component.description1}
                         description2={component.description2}
                     />
+                } else if (component.component === "VideoWithTitle") {
+                    return <VideoWithTitle
+                        src={component.src}
+                        description={component.description} />
                 }
             })}
             <div className="project-detail__separator project-detail__row" />
