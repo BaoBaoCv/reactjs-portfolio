@@ -34,7 +34,7 @@ $ratio-width-to-height: 1.267;
         display: flex;
         align-items: center;
         margin: 5px 0;
-        img{
+        img {
             width: 100%;
             max-height: 100%;
         }
@@ -67,6 +67,9 @@ $ratio-width-to-height: 1.267;
             :not(:last-child) {
                 margin-right: 10px;
             }
+        }
+        &__img {
+            height: 70%;
         }
         &__name-card {
             padding: 0 2.5vw;
