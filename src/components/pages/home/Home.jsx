@@ -13,15 +13,15 @@ const Home = () => {
             setUserData(user);
         };
         fetchData();
-
     }, []);
     return !userData ? (
         <PageSpinner />
     ) : (
         <div className="home">
             <Intro user={userData} />
-            <Timeline user={userData} timelineType={userData.projects} />
-            <Timeline user={userData} timelineType={userData.achievements} />
+            {userData.timelines.map((item) => (
+                <Timeline user={userData} timelineType={item} />
+            ))}
         </div>
     );
 };
