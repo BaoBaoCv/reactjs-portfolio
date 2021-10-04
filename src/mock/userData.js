@@ -142,7 +142,7 @@ const baoPham = {
     introSubStatement: `Ho Chi Minh - Vietnam -
         dangkimbao1999@gmail.com -
         0933359290`,
-    introDecoration: BaoKimDecor,
+    introDecoration: BaoPhamDecor,
     linkedInUrl: "https://www.linkedin.com/in/bao-dang-kim-25a612184/",
     facebookUrl: "https://www.facebook.com/bao.dangkim1999/",
     githubUrl: "https://www.instagram.com/dangkimbao1999/",
