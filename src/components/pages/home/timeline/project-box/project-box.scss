@@ -25,6 +25,7 @@
             margin: 17px 0;
             font-weight: 600;
             font-size: 30px;
+            line-height: 30px;
             color: $dark_green;
             text-transform: capitalize;
         }
@@ -49,6 +50,7 @@
             &-company {
                 margin: 10px 0;
                 font-size: 6.5vw;
+                line-height: 6.5vw;
             }
         }
     }
