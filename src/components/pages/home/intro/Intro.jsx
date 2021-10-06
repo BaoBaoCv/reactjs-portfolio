@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
 import "./intro.scss";
 import { Col, Container, Row } from "react-bootstrap";
@@ -47,6 +47,13 @@ const columnForImageStyle = {
 };
 
 const Intro = ({ user }) => {
+    const [characters, setCharacters] = useState(
+        [...Array(3)].map(() => {
+            return CHARACTER_IMAGES[
+                getRndInteger(0, CHARACTER_IMAGES.length - 1)
+            ];
+        })
+    );
     return (
         <Container className="intro__container">
             <Row>
@@ -127,14 +134,7 @@ const Intro = ({ user }) => {
                                 />
                                 <motion.img
                                     className="intro__character-img-left"
-                                    src={
-                                        CHARACTER_IMAGES[
-                                            getRndInteger(
-                                                0,
-                                                CHARACTER_IMAGES.length - 1
-                                            )
-                                        ]
-                                    }
+                                    src={characters[0]}
                                     initial={{
                                         y: -1000,
                                     }}
@@ -181,14 +181,7 @@ const Intro = ({ user }) => {
                                 />
                                 <motion.img
                                     className="intro__character-img-right"
-                                    src={
-                                        CHARACTER_IMAGES[
-                                            getRndInteger(
-                                                0,
-                                                CHARACTER_IMAGES.length - 1
-                                            )
-                                        ]
-                                    }
+                                    src={characters[1]}
                                     initial={{
                                         y: -1000,
                                     }}

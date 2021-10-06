@@ -20,7 +20,7 @@ const Home = () => {
         <div className="home">
             <Intro user={userData} />
             {userData.timelines.map((item) => (
-                <Timeline user={userData} timelineType={item} />
+                <Timeline key={item.timelineTitle} timelineType={item} />
             ))}
         </div>
     );

@@ -12,7 +12,7 @@ import {
     PIXEL_ARTS,
     getRndInteger,
     getMonthStr,
-    getRndIntegerAfterOccurence
+    getRndIntegerAfterOccurence,
 } from "@/constants";
 
 import "./timeline.scss";
@@ -27,17 +27,18 @@ const charaPostions = [
     "timeline__character-center",
 ];
 
-const Timeline = ({ user, timelineType }) => {
-    const [temptArr, setTemptArr] = useState(getRndIntegerAfterOccurence(PIXEL_ARTS.length));
-    const project = timelineType
+const Timeline = ({ timelineType }) => {
+    const [temptArr, setTemptArr] = useState(
+        getRndIntegerAfterOccurence(PIXEL_ARTS.length)
+    );
+    const project = timelineType;
     const popAndGenerateNewArr = () => {
         if (temptArr.length === 0) {
             setTemptArr(getRndIntegerAfterOccurence(10));
-        }
-        else {
+        } else {
             return temptArr.pop();
         }
-    }
+    };
     const [isHovered, setIsHovered] = useState(
         project.timelineProjects.map((project) => {
             return false;
@@ -78,9 +79,9 @@ const Timeline = ({ user, timelineType }) => {
                         iconStyle={
                             project.isYearHidden
                                 ? {
-                                    width: "0",
-                                    height: "0",
-                                }
+                                      width: "0",
+                                      height: "0",
+                                  }
                                 : {}
                         }
                         icon={
@@ -90,8 +91,9 @@ const Timeline = ({ user, timelineType }) => {
                                 className="timeline__date"
                             >
                                 <div
-                                    className={`timeline__date-year ${project.isYearHidden ? "hidden" : ""
-                                        }`}
+                                    className={`timeline__date-year ${
+                                        project.isYearHidden ? "hidden" : ""
+                                    }`}
                                 >
                                     {`${project.date.getYear() + 1900}`}
                                 </div>
@@ -124,7 +126,7 @@ const Timeline = ({ user, timelineType }) => {
                                 }}
                             >
                                 {characters[index].position ==
-                                    "timeline__character-left" ? (
+                                "timeline__character-left" ? (
                                     <motion.img
                                         drag
                                         dragConstraints={{

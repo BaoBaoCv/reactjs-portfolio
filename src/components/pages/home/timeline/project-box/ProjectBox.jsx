@@ -40,10 +40,7 @@ const ProjectBox = ({ index, isHovered, setIsHovered, project, src }) => {
                 <Link
                     className={"project-box__bottom-link"}
                     to={{
-                        pathname: "/projectDetail",
-                        state: {
-                            project: project,
-                        },
+                        pathname: `/projectDetail/${project.id}`,
                     }}
                 >
                     <motion.img

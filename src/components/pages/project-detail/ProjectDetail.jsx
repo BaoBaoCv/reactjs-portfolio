@@ -13,16 +13,15 @@ import "./project-detail.scss";
 
 const ProjectDetail = ({ location }) => {
     const [projectDetail, setProjectDetail] = useState(null);
-    const project = location.state.project;
     useEffect(() => {
         const fetchData = async () => {
-            const root = project.id.split("/")[0];
-            const id = project.id.split("/")[1];
+            const pathname = location.pathname;
+            const root = pathname.split("/")[2];
+            const id = pathname.split("/")[3];
             const data = await import(
                 `../../../mock/${root}/projects/${id}.js`
             );
             setProjectDetail(data.default);
-            console.log(project)
         };
         fetchData();
     }, []);
@@ -40,8 +39,9 @@ const ProjectDetail = ({ location }) => {
                         {projectDetail.client}
                     </div>
                     <div className="project-detail__intro-title">
-                        {`${getMonthStr(project.date)}, ${project.date.getYear() + 1900
-                            }`}
+                        {`${getMonthStr(projectDetail.date)}, ${
+                            projectDetail.date.getYear() + 1900
+                        }`}
                     </div>
                 </div>
                 <div className="project-detail__intro-role project-detail__intro-item">
@@ -55,48 +55,57 @@ const ProjectDetail = ({ location }) => {
                 <img
                     // className="project-detail__cover-character"
                     className="project-detail__images-header"
-                    src={
-                        PIXEL_ARTS[
-                        getRndInteger(0, PIXEL_ARTS.length - 1)
-                        ]
-                    }
+                    src={PIXEL_ARTS[getRndInteger(0, PIXEL_ARTS.length - 1)]}
                 />
-                <a href="https://jefflin276.wixsite.com/pixeljeff">Source: Pixel Jeff</a>
+                <a href="https://jefflin276.wixsite.com/pixeljeff">
+                    Source: Pixel Jeff
+                </a>
             </div>
             {projectDetail.contents.map((component) => {
                 if (component.component === "ProjectDescription") {
-                    return <ProjectDescription
-                        title={component.title}
-                        col1={component.col1}
-                        col2={component.col2}
-                    />
+                    return (
+                        <ProjectDescription
+                            title={component.title}
+                            col1={component.col1}
+                            col2={component.col2}
+                        />
+                    );
                 } else if (component.component === "ImageWithTitle") {
-                    return <ImageWithTitle
-                        src1={component.src1}
-                        src2={component.src2}
-                        description1={component.description1}
-                        description2={component.description2}
-                    />
+                    return (
+                        <ImageWithTitle
+                            src1={component.src1}
+                            src2={component.src2}
+                            description1={component.description1}
+                            description2={component.description2}
+                        />
+                    );
                 } else if (component.component === "VideoWithTitle") {
-                    return <VideoWithTitle
-                        src={component.src}
-                        description={component.description} />
+                    return (
+                        <VideoWithTitle
+                            src={component.src}
+                            description={component.description}
+                        />
+                    );
                 }
             })}
             <div className="project-detail__separator project-detail__row" />
             <div className="project-detail__meta-data project-detail__row">
-                {projectDetail.card1 && (<DescriptionCard
-                    title={projectDetail.card1.title}
-                    description={projectDetail.card1.detail}
-                    className="meta-data-item"
-                ></DescriptionCard>)}
-                {projectDetail.card2 && (<DescriptionCard
-                    title={projectDetail.card2.title}
-                    description={projectDetail.card2.detail}
-                    className="meta-data-item"
-                ></DescriptionCard>)}
+                {projectDetail.card1 && (
+                    <DescriptionCard
+                        title={projectDetail.card1.title}
+                        description={projectDetail.card1.detail}
+                        className="meta-data-item"
+                    ></DescriptionCard>
+                )}
+                {projectDetail.card2 && (
+                    <DescriptionCard
+                        title={projectDetail.card2.title}
+                        description={projectDetail.card2.detail}
+                        className="meta-data-item"
+                    ></DescriptionCard>
+                )}
                 <div className="project-detail__meta-data-tags meta-data-item">
-                    {project.tags.map((tag) => (
+                    {projectDetail.tags.map((tag) => (
                         <ProjectCategoryTag data={tag} />
                     ))}
                 </div>

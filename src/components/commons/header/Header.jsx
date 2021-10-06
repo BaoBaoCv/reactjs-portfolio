@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Link, useHistory, BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+    Link,
+    useHistory,
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
 import { Button, Image, Offcanvas } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { routes } from "@/configs";
@@ -15,13 +21,15 @@ const Header = () => {
     return (
         <>
             <div className="header">
-                <Router>
-                    <div className="header__title">
-                        <a href="/" >
-                            {user.headerTitle}
-                        </a>
-                    </div>
-                </Router>
+                <Link
+                    className="header__title"
+                    to={{
+                        pathname: "/",
+                        state: { previousRoute: history.location.pathname },
+                    }}
+                >
+                    {user.headerTitle}
+                </Link>
                 <div className="header__menu">
                     <Image
                         onClick={() => {
@@ -36,7 +44,7 @@ const Header = () => {
                         src={HamburgerIcon}
                     />
                 </div>
-            </div >
+            </div>
 
             <Offcanvas
                 className="header__drawer"
@@ -59,7 +67,13 @@ const Header = () => {
                                     <Link
                                         onClick={() => setShow(false)}
                                         className="header__drawer-link"
-                                        to={route.path}
+                                        to={{
+                                            pathname: route.path,
+                                            state: {
+                                                previousRoute:
+                                                    history.location.pathname,
+                                            },
+                                        }}
                                     >
                                         <Image
                                             className={"header__drawer-img"}

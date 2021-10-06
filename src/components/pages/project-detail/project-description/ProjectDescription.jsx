@@ -9,7 +9,6 @@ const ProjectDescription = ({ title, col1, col2 }) => {
     } else {
         paraClassName = "two-col";
         isTwoCols = true;
-        console.log(col2)
     }
     return (
         <div className={`project-description project-detail__row`}>

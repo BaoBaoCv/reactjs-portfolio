@@ -56,7 +56,15 @@ const GradientBg = () => {
         };
         window.addEventListener("resize", handleResize);
         history.listen((location) => {
+            if (
+                location.state &&
+                location.state.previousRoute &&
+                location.state.previousRoute === location.pathname
+            ) {
+                return;
+            }
             handleResize();
+            console.log("Change");
             window.scrollTo(0, 0);
         });
         return () => {

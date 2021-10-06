@@ -15,7 +15,7 @@ const App = () => {
                 {routes.map((route) => (
                     <Route
                         key={route.name}
-                        exact
+                        exact={route.path !== "/projectDetail"}
                         path={route.path}
                         component={route.component}
                     />

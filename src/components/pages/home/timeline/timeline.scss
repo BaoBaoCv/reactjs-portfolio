@@ -102,7 +102,9 @@ $timeline-line-width: 3px;
 
     &__character {
         position: relative;
-        cursor: pointer;
+        img {
+            cursor: pointer;
+        }
         &-box {
             position: relative;
             max-width: 464px;
