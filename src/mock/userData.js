@@ -137,11 +137,11 @@ const baoPham = {
     headerTitle: "bao_pham/portfolio",
 
     introName: "Pham Gia Bao - hello world",
-    introStatement: `currently, i am a web developer & programer who loves doing inspirational things with fresh minds. now i am working at Netcompany, but I always seek for a new chance to develop myself, and hoping that in oneday, I will be able to do that I love the most: Do creative and be inspired. 
+    introStatement: `currently, i am a web developer & programer who loves doing inspirational things with fresh minds. now i am working at ELCA, but I always seek for a new chance to develop myself, and hoping that in oneday, I will be able to do that I love the most: Do creative and be inspired. 
         My main tech stack: Reactjs, Nodejs, Java, Spring, but I am always willing to learn new things `,
     introSubStatement: `Ho Chi Minh - Vietnam -
-        dangkimbao1999@gmail.com -
-        0933359290`,
+        pambao@gmail.com -
+        0123456789`,
     introDecoration: BaoPhamDecor,
     linkedInUrl: "https://www.linkedin.com/in/bao-pham-394284185/",
     facebookUrl: "https://www.facebook.com/giabao.pham.92167/",
@@ -160,7 +160,7 @@ const baoPham = {
                     date: new Date(2018, 1),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/1",
+                    id: "bao-pham/1",
                 },
                 {
                     name: "Bike booking application",
@@ -169,7 +169,7 @@ const baoPham = {
                     date: new Date(2019, 11),
                     company: "VGU - Frankfurt UAS",
                     role: "developer",
-                    id: "bao-kim/2",
+                    id: "bao-pham/2",
                 },
                 {
                     name: "Vietnamese German Uni websites",
@@ -178,7 +178,7 @@ const baoPham = {
                     date: new Date(2020, 8),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/4",
+                    id: "bao-pham/4",
                 },
                 {
                     name: "Book reader application",
@@ -187,7 +187,7 @@ const baoPham = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/3",
+                    id: "bao-pham/3",
                 },
                 {
                     name: `MEDICAL IMAGE PROCESSING OBJECT DETECTION`,
@@ -196,25 +196,25 @@ const baoPham = {
                     date: new Date(2021, 8),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/4",
+                    id: "bao-pham/4",
                 },
                 {
                     name: "RESTRICTED INFO",
                     tags: ["JENKINS", "AZURE", "AEM"],
                     isYearHidden: true,
                     date: new Date(2021, 4),
-                    company: "NETCOMPANY",
+                    company: "ELCA",
                     role: "DevOps",
-                    id: "bao-kim/sample",
+                    id: "bao-pham/sample",
                 },
                 {
                     name: "RESTRICTED INFO",
                     tags: ["JAVA", "VUEJS", "AEM"],
                     isYearHidden: true,
                     date: new Date(2021, 8),
-                    company: "NETCOMPANY",
+                    company: "ELCA",
                     role: "developer",
-                    id: "bao-kim/sample",
+                    id: "bao-pham/sample",
                 },
                 {
                     name: "CV VIP PRO (THIS.OBJECT)",
@@ -223,7 +223,7 @@ const baoPham = {
                     date: new Date(2021, 9),
                     company: "Freelance",
                     role: "developer, PRODUCT OWNER",
-                    id: "bao-kim/sample",
+                    id: "bao-pham/sample",
                 },
             ],
         },
@@ -240,7 +240,7 @@ const baoPham = {
                     date: new Date(2017, 8),
                     company: "PERSONAL",
                     role: "PRESENTOR",
-                    id: "bao-kim/sample",
+                    id: "bao-pham/sample",
                 },
                 {
                     name: "STARTUP BATTLE IDEA",
@@ -249,7 +249,7 @@ const baoPham = {
                     date: new Date(2020, 1),
                     company: "TEAM",
                     role: "TECHNOLOGY CONSULTANT",
-                    id: "bao-kim/sample",
+                    id: "bao-pham/sample",
                 },
                 {
                     name: "DAAD SCHOLARSHIP",
@@ -258,11 +258,11 @@ const baoPham = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "STUDENT",
-                    id: "bao-kim/sample",
+                    id: "bao-pham/sample",
                 },
             ],
         },
     ],
 };
 
-export { baoKim as user };
+export { baoPham as user };
