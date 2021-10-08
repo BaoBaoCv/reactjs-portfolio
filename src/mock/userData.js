@@ -265,4 +265,4 @@ const baoPham = {
     ],
 };
 
-export { baoPham as user };
+export { baoKim as user };
