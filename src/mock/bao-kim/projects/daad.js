@@ -1,6 +1,9 @@
 import placeholder from "@/mock/bao-kim/images/placeholder.jpg";
 import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad52f23 (update daad exp)
 import bao from "@/assets/images/bao.jpg";
 import cameo from "@/assets/images/cameo.jpg"
 import khai from "@/assets/images/khai.jpg"
@@ -8,7 +11,10 @@ import phuoc from "@/assets/images/phuoc.jpg"
 import thien from "@/assets/images/thien.jpg"
 import cameo2 from "@/assets/images/cameo2.jpg"
 import cs2017 from "@/assets/images/cs2017.jpg"
+<<<<<<< HEAD
 
+=======
+>>>>>>> ad52f23 (update daad exp)
 export default {
     name: "Games simulating on Minecraft",
     client: "School subject",
