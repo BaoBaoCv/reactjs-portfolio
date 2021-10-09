@@ -28,16 +28,25 @@ const baoKim = {
                     date: new Date(2018, 1),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/minecraft",
                 },
                 {
                     name: "Bike booking application",
-                    tags: ["java", "backend", "agile"],
+                    tags: ["agile", "scrum"],
                     isYearHidden: false,
                     date: new Date(2019, 11),
                     company: "VGU - Frankfurt UAS",
                     role: "developer",
-                    id: "bao-kim/2",
+                    id: "bao-kim/booking-application",
+                },
+                {
+                    name: "Stadium booking application",
+                    tags: ["java", "backend"],
+                    isYearHidden: false,
+                    date: new Date(2019, 11),
+                    company: "VGU - Frankfurt UAS",
+                    role: "developer",
+                    id: "bao-kim/stadium-booking-application",
                 },
                 {
                     name: "Vietnamese German Uni websites",
@@ -46,7 +55,7 @@ const baoKim = {
                     date: new Date(2020, 8),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/4",
+                    id: "bao-kim/vgu-website",
                 },
                 {
                     name: "Book reader application",
@@ -55,7 +64,7 @@ const baoKim = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/3",
+                    id: "bao-kim/book-reader",
                 },
                 {
                     name: `MEDICAL IMAGE PROCESSING OBJECT DETECTION`,
@@ -64,7 +73,7 @@ const baoKim = {
                     date: new Date(2021, 8),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/4",
+                    id: "bao-kim/mip",
                 },
                 {
                     name: "RESTRICTED INFO",
@@ -73,7 +82,7 @@ const baoKim = {
                     date: new Date(2021, 4),
                     company: "NETCOMPANY",
                     role: "DevOps",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/nc-devops",
                 },
                 {
                     name: "RESTRICTED INFO",
@@ -82,7 +91,7 @@ const baoKim = {
                     date: new Date(2021, 8),
                     company: "NETCOMPANY",
                     role: "developer",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/nc-dev",
                 },
                 {
                     name: "CV VIP PRO (THIS.OBJECT)",
@@ -91,11 +100,10 @@ const baoKim = {
                     date: new Date(2021, 9),
                     company: "Freelance",
                     role: "developer, PRODUCT OWNER",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/cv-vip",
                 },
             ],
         },
-
         {
             timelineTitle: "ACTIVITIES",
             timelineStartYear: "2017",
@@ -108,7 +116,7 @@ const baoKim = {
                     date: new Date(2017, 8),
                     company: "PERSONAL",
                     role: "PRESENTOR",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/pitch-future-idea",
                 },
                 {
                     name: "STARTUP BATTLE IDEA",
@@ -117,7 +125,7 @@ const baoKim = {
                     date: new Date(2020, 1),
                     company: "TEAM",
                     role: "TECHNOLOGY CONSULTANT",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/startup-idea",
                 },
                 {
                     name: "DAAD SCHOLARSHIP",
@@ -132,137 +140,4 @@ const baoKim = {
         },
     ],
 };
-
-const baoPham = {
-    headerTitle: "bao_pham/portfolio",
-
-    introName: "Pham Gia Bao - hello world",
-    introStatement: `currently, i am a web developer & programer who loves doing inspirational things with fresh minds. now i am working at ELCA, but I always seek for a new chance to develop myself, and hoping that in oneday, I will be able to do that I love the most: Do creative and be inspired. 
-        My main tech stack: Reactjs, Nodejs, Java, Spring, but I am always willing to learn new things `,
-    introSubStatement: `Ho Chi Minh - Vietnam -
-        pambao@gmail.com -
-        0123456789`,
-    introDecoration: BaoPhamDecor,
-    linkedInUrl: "https://www.linkedin.com/in/bao-pham-394284185/",
-    facebookUrl: "https://www.facebook.com/giabao.pham.92167/",
-    githubUrl: "https://github.com/Pambao",
-
-    timelines: [
-        {
-            timelineTitle: "PROJECTS",
-            timelineStartYear: "2017",
-            timelineEndYear: "2021",
-            timelineProjects: [
-                {
-                    name: "VGU - My first ever project lalala",
-                    tags: ["python", "backend"],
-                    isYearHidden: false,
-                    date: new Date(2018, 2),
-                    company: "VGU",
-                    role: "developer",
-                    id: "bao-pham/1",
-                },
-                {
-                    name: "Bike booking application",
-                    tags: ["java", "backend", "agile"],
-                    isYearHidden: false,
-                    date: new Date(2019, 11),
-                    company: "VGU - Frankfurt UAS",
-                    role: "developer",
-                    id: "bao-pham/2",
-                },
-                {
-                    name: "Vietnamese German Uni websites",
-                    tags: ["WIX", "WORDPRESS", "JAVASCRIPT"],
-                    isYearHidden: false,
-                    date: new Date(2020, 8),
-                    company: "VGU",
-                    role: "developer",
-                    id: "bao-pham/4",
-                },
-                {
-                    name: "Book reader application",
-                    tags: ["java", "backend"],
-                    isYearHidden: false,
-                    date: new Date(2020, 9),
-                    company: "VGU",
-                    role: "developer",
-                    id: "bao-pham/3",
-                },
-                {
-                    name: `MEDICAL IMAGE PROCESSING OBJECT DETECTION`,
-                    tags: ["PYTHON", "AI"],
-                    isYearHidden: false,
-                    date: new Date(2021, 8),
-                    company: "VGU",
-                    role: "developer",
-                    id: "bao-pham/4",
-                },
-                {
-                    name: "RESTRICTED INFO",
-                    tags: ["JENKINS", "AZURE", "AEM"],
-                    isYearHidden: true,
-                    date: new Date(2021, 4),
-                    company: "ELCA",
-                    role: "DevOps",
-                    id: "bao-pham/sample",
-                },
-                {
-                    name: "RESTRICTED INFO",
-                    tags: ["JAVA", "VUEJS", "AEM"],
-                    isYearHidden: true,
-                    date: new Date(2021, 8),
-                    company: "ELCA",
-                    role: "developer",
-                    id: "bao-pham/sample",
-                },
-                {
-                    name: "CV VIP PRO (THIS.OBJECT)",
-                    tags: ["REACTJS", "ui_ux"],
-                    isYearHidden: false,
-                    date: new Date(2021, 9),
-                    company: "Freelance",
-                    role: "developer, PRODUCT OWNER",
-                    id: "bao-pham/sample",
-                },
-            ],
-        },
-
-        {
-            timelineTitle: "ACTIVITIES",
-            timelineStartYear: "2017",
-            timelineEndYear: "2021",
-            timelineProjects: [
-                {
-                    name: "PITCH YOUR FUTURE IDEAS",
-                    tags: ["IDEA"],
-                    isYearHidden: false,
-                    date: new Date(2017, 8),
-                    company: "PERSONAL",
-                    role: "PRESENTOR",
-                    id: "bao-pham/sample",
-                },
-                {
-                    name: "STARTUP BATTLE IDEA",
-                    tags: ["STARTUP IDEA"],
-                    isYearHidden: false,
-                    date: new Date(2020, 1),
-                    company: "TEAM",
-                    role: "TECHNOLOGY CONSULTANT",
-                    id: "bao-pham/sample",
-                },
-                {
-                    name: "DAAD SCHOLARSHIP",
-                    tags: ["SCHOLARSHIP", "GERMANY"],
-                    isYearHidden: true,
-                    date: new Date(2020, 9),
-                    company: "VGU",
-                    role: "STUDENT",
-                    id: "bao-pham/sample",
-                },
-            ],
-        },
-    ],
-};
-
 export { baoKim as user };

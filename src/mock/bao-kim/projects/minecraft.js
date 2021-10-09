@@ -24,6 +24,12 @@ export default {
             ],
             description1: "Random image",
         },
+        {
+            component: "ProjectDescription",
+            title: "OUTCOME",
+            col1: `- Coding in PYTHON.`,
+            col2: `How to write a progress Report.`
+        },
     ],
     card1: {
         title: "Credit",

@@ -17,6 +17,14 @@ export default {
             `,
         },
         {
+            component: "ProjectDescription",
+            title: "OUTCOME",
+            col1: `- Experience the industrial process of producing a product
+            - Getting through an Agile process, working in a Scrum team.
+            - Worked with the foreigners, have a brief idea on how to work in an international team
+            - Knowing how to finish a full Product proposal.`,
+        },
+        {
             component: "ImageWithTitle",
             src1: germany,
             description1: "A lecture in Frankfurt UAS",
