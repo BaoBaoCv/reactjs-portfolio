@@ -21,11 +21,10 @@ export default {
         {
             component: "ProjectDescription",
             title: "EXPERIENCE",
-            col1: `Sorry for interrupting the academic mood, but for this one, I  would get a bit more personal, so it might not contain any of my professional information. So proceed as you please :) And I hope you will enjoy it :)
-            
-            Memories in Germany: https://photos.app.goo.gl/SBZYc5gbaPFk8yXeA
-            
-            To begin with, I just want to talk a little bit about my school, which granted me this scholarship and granted me the possibility to experience one of the best ever moment in my life. VGU is somewhat a really special academic institute, a Vietnamese university, but every major in this school associate with another University in Germany, in my case, it is Frankfurt University of Applied Science. Every major will offer you a specific scholarship, and in my case, it is a semester in Germany. And I was lucky enough to get 1 direct ticket to Germany for 1 semester. And thanks to this journey, not only academic knowledge, this trip brought me a lot of lesson about life, about how can I adapt to situation, about how to get over depression, and the true beauty of friendship`,
+            col1: `Sorry for interrupting the mood, but for this one, I  would get a bit more personal, so it might not contain any of my professional information. So proceed as you please :) And I hope you will enjoy it :)
+                        
+            To begin with, I just want to talk a little bit about my school, which granted me this scholarship and granted me the possibility to experience one of the best ever moment in my life. VGU is somewhat a really special academic institute, a Vietnamese university, but every major in this school associate with another University in Germany, in my case, it is Frankfurt University of Applied Science. Every major will offer you a specific scholarship, and in my case, it is a semester in Germany. And I was lucky enough to get 1 direct ticket to Germany for 1 semester. And thanks to this journey, not only academic knowledge, this trip brought me a lot of lesson about life, about how can I adapt to situation, about how to get over depression, and the true beauty of friendship
+            Memories in Germany: https://photos.app.goo.gl/SBZYc5gbaPFk8yXeA`,
         },
         {
             component: "ProjectDescription",
