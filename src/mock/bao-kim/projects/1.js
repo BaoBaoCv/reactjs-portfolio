@@ -2,9 +2,6 @@ import placeholder from "@/mock/bao-kim/images/placeholder.jpg";
 import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
 
 export default {
-    name: "Games simulating on Minecraft",
-    client: "School subject",
-    role: "Developer",
     contents: [
         {
             component: "ProjectDescription",

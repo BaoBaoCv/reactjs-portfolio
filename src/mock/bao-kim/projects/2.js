@@ -2,9 +2,6 @@ import { CHARACTER_IMAGES, getRndInteger, PIXEL_ARTS } from "@/constants";
 import germany from "@/assets/images/lecture-germany.jpg";
 
 export default {
-    name: "Games simulating on Minecraft",
-    client: "School subject",
-    role: "Developer",
     contents: [
         {
             component: "ProjectDescription",

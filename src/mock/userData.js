@@ -155,12 +155,12 @@ const baoPham = {
             timelineProjects: [
                 {
                     name: "VGU - My first ever project lalala",
-                    tags: ["python", "backend", "dmcs"],
+                    tags: ["python", "backend"],
                     isYearHidden: false,
                     date: new Date(2018, 2),
-                    company: "VGU CL",
+                    company: "VGU",
                     role: "developer",
-                    id: "bao-pham/sample",
+                    id: "bao-pham/1",
                 },
                 {
                     name: "Bike booking application",
