@@ -13,6 +13,9 @@ import "./project-detail.scss";
 
 const ProjectDetail = ({ location }) => {
     const [projectDetail, setProjectDetail] = useState(null);
+    const [userData, setUserData] = useState(null);
+    const [projectMetaData, setProjectMetaData] = useState(null);
+
     useEffect(() => {
         const fetchData = async () => {
             const pathname = location.pathname;
@@ -21,33 +24,43 @@ const ProjectDetail = ({ location }) => {
             const data = await import(
                 `../../../mock/${root}/projects/${id}.js`
             );
+            const { user } = await import("../../../mock/userData.js");
+            const fullId = root + "/" + id;
             setProjectDetail(data.default);
+            setUserData(user);
+            user.timelines.every(timeline => {
+                const tempt = (timeline.timelineProjects.find(({ id }) => id === fullId));
+                setProjectMetaData(tempt);
+                if (tempt) {
+                    return false;
+                }
+                return true;
+            })
         };
         fetchData();
     }, []);
-    return !projectDetail ? (
+    return !projectDetail || !userData || !projectMetaData ? (
         <PageSpinner />
     ) : (
         <div className="project-detail">
             <div className="project-detail__intro project-detail__row">
                 <div className="project-detail__intro-name project-detail__intro-item">
-                    {projectDetail.name}
+                    {projectMetaData.name}
                 </div>
                 <div className="project-detail__intro-date project-detail__intro-item">
                     <div className="project-detail__intro-title">Client</div>
                     <div className="project-detail__intro-detail">
-                        {projectDetail.client}
+                        {projectMetaData.company}
                     </div>
                     <div className="project-detail__intro-title">
-                        {`${getMonthStr(projectDetail.date)}, ${
-                            projectDetail.date.getYear() + 1900
-                        }`}
+                        {`${getMonthStr(projectMetaData.date)}, ${projectMetaData.date.getYear() + 1900
+                            }`}
                     </div>
                 </div>
                 <div className="project-detail__intro-role project-detail__intro-item">
                     <div className="project-detail__intro-title">Role</div>
                     <div className="project-detail__intro-detail">
-                        {projectDetail.role}
+                        {projectMetaData.role}
                     </div>
                 </div>
             </div>
@@ -105,7 +118,7 @@ const ProjectDetail = ({ location }) => {
                     ></DescriptionCard>
                 )}
                 <div className="project-detail__meta-data-tags meta-data-item">
-                    {projectDetail.tags.map((tag) => (
+                    {projectMetaData.tags.map((tag) => (
                         <ProjectCategoryTag data={tag} />
                     ))}
                 </div>
