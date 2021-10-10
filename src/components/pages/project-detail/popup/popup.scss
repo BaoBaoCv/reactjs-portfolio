@@ -1,0 +1,72 @@
+@import "@/assets/styles/index.scss";
+
+.modal-background {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7)
+}
+  
+.modal-container {
+    border-radius: 12px;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    max-height: 70vh;
+    overflow: scroll;
+    .title {
+        display: inline-block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .body {
+        flex: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        img{
+            width: 50vw;
+        }
+    }
+    .footer {
+        flex: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+            width: 150px;
+            height: 45px;
+            margin: 10px;
+            border: none;
+            background-color: cornflowerblue;
+            color: white;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.close-btn {
+    display: flex;
+    justify-content: flex-end;
+    button {
+        background-color: transparent;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: $dark_green;
+    }
+} 

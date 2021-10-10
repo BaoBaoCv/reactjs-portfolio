@@ -1,12 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from "react-router-dom";
-import { Image } from "react-bootstrap";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import ProjectCard from "./project-card/ProjectCard";
@@ -14,7 +7,6 @@ import decorIcon from "@/assets/images/project-link-icon.png";
 import { getMonthStr } from "@/constants";
 
 import "./project-box.scss";
-import popup from "../../../project-detail/popup/popup";
 
 const variants = {
     rotate: { rotate: [0, -30, 0], transition: { duration: 0.5 } },
@@ -22,8 +14,8 @@ const variants = {
 };
 
 const ProjectBox = ({ index, isHovered, setIsHovered, project, src }) => {
-    const [projectDetail, setprojectDetail] = useState(null)
-    const [modalShow, setModalShow] = useState(false);
+    let location = useLocation();
+    console.log(project)
     return (
         <div className="project-box">
             <ProjectCard
@@ -47,9 +39,13 @@ const ProjectBox = ({ index, isHovered, setIsHovered, project, src }) => {
                     </div>
                 </div>
                 <Link
+                    key={project.id}
                     className={"project-box__bottom-link"}
-                    to={{
-                        pathname: `/projectDetail/${project.id}`,
+                    to={project.useModal ? {
+                        pathname: `/modal/${project.id}`,
+                        state: { background: location }
+                    } : {
+                        pathname: `/projectDetail/${project.id}`
                     }}
                 >
                     <motion.img
@@ -58,17 +54,8 @@ const ProjectBox = ({ index, isHovered, setIsHovered, project, src }) => {
                         animate={isHovered[index] ? "rotate" : "none"}
                         className="project-box__bottom-icon"
                         src={decorIcon}
-                        onClick={setModalShow(true)}
                     />
                 </Link>
-                {project.useModal && (
-                    <Switch>
-                        <Route path={`/projectDetail/${project.id}`}>
-                            <Popup show={modalShow} onHide={setModalShow(false)} />
-                        </Route>
-                    </Switch>
-                )}
-
             </div>
         </div>
     );

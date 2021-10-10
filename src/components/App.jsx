@@ -5,22 +5,26 @@ import { routes } from "@/configs";
 import Header from "@/components/commons/header/Header";
 import GradientBg from "./commons/gradient-bg/GradientBg";
 import Footer from "./commons/footer/Footer";
-
+import Popup from "@/components/pages/project-detail/popup/Popup";
+import { useLocation } from "react-router";
 import "@/components/app.scss";
 const App = () => {
+    let location = useLocation();
+    let background = location.state && location.state.background;
     return (
         <div className="app">
             <Header />
-            <Switch>
+            <Switch location={background || location}>
                 {routes.map((route) => (
                     <Route
                         key={route.name}
-                        exact={route.path !== "/projectDetail"}
+                        exact={route.path !== "/projectDetail" && route.path !== "/modal"}
                         path={route.path}
                         component={route.component}
                     />
                 ))}
             </Switch>
+            {background && <Route path="/modal/:id" children={<Popup />} />}
             <GradientBg />
             <Footer />
         </div>

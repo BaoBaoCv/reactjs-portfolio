@@ -29,7 +29,6 @@ const baoKim = {
                     company: "VGU",
                     role: "developer",
                     id: "bao-kim/sample",
-                    useModal: true
                 },
                 {
                     name: "Bike booking application",
@@ -162,7 +161,8 @@ const baoPham = {
                     date: new Date(2018, 2),
                     company: "VGU CL",
                     role: "developer",
-                    id: "bao-pham/sample",
+                    id: "bao-pham/sample-modal",
+                    useModal: true
                 },
                 {
                     name: "Bike booking application",
