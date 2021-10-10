@@ -29,6 +29,7 @@ const baoKim = {
                     company: "VGU",
                     role: "developer",
                     id: "bao-kim/sample",
+                    useModal: true
                 },
                 {
                     name: "Bike booking application",
@@ -83,6 +84,7 @@ const baoKim = {
                     company: "NETCOMPANY",
                     role: "developer",
                     id: "bao-kim/sample",
+                    useModal: true
                 },
                 {
                     name: "CV VIP PRO (THIS.OBJECT)",

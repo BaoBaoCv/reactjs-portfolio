@@ -1,11 +1,6 @@
 import { getRndInteger, PIXEL_ARTS } from "@/constants";
 
 export default {
-    name: "Android Application Robot",
-    client: "Google Inc",
-    role: "Developer",
-    date: new Date(2018, 1),
-    tags: ["python", "backend"],
     contents: [
         {
             component: "ProjectDescription",
