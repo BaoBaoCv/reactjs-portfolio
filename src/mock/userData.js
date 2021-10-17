@@ -9,8 +9,8 @@ const baoKim = {
     introName: "Dang Kim Bao - hello world",
     introStatement: `currently, i am a web developer & programer who loves doing inspirational things with fresh minds. now i am working at Netcompany, but I always seek for a new chance to develop myself, and hoping that in oneday, I will be able to do that I love the most: Do creative and be inspired. 
         My main tech stack: Reactjs, Nodejs, Java, Spring, but I am always willing to learn new things `,
-    introSubStatement: `Ho Chi Minh - Vietnam -
-        dangkimbao1999@gmail.com -
+    introSubStatement: `Ho Chi Minh - Vietnam
+        dangkimbao1999@gmail.com
         0933359290`,
     introDecoration: BaoKimDecor,
     cvFile: BaoKimCv,
@@ -31,28 +31,19 @@ const baoKim = {
                     date: new Date(2018, 1),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/minecraft",
                 },
                 {
                     name: "Bike booking application",
-                    tags: ["java", "backend", "agile"],
+                    tags: ["agile", "scrum"],
                     isYearHidden: false,
                     date: new Date(2019, 11),
                     company: "VGU - Frankfurt UAS",
                     role: "developer",
-                    id: "bao-kim/2",
+                    id: "bao-kim/booking-application",
                 },
                 {
-                    name: "Vietnamese German Uni websites",
-                    tags: ["WIX", "WORDPRESS", "JAVASCRIPT"],
-                    isYearHidden: false,
-                    date: new Date(2020, 8),
-                    company: "VGU",
-                    role: "developer",
-                    id: "bao-kim/4",
-                },
-                {
-                    name: "Book reader application",
+                    name: "Stadium booking application",
                     tags: ["java", "backend"],
                     isYearHidden: false,
                     date: new Date(2020, 9),
@@ -175,7 +166,7 @@ const baoPham = {
                     date: new Date(2019, 11),
                     company: "VGU - Frankfurt UAS",
                     role: "developer",
-                    id: "bao-pham/2",
+                    id: "bao-kim/stadium-booking-application",
                 },
                 {
                     name: "Vietnamese German Uni websites",
@@ -184,7 +175,7 @@ const baoPham = {
                     date: new Date(2020, 8),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-pham/4",
+                    id: "bao-kim/vgu-website",
                 },
                 {
                     name: "Book reader application",
@@ -193,7 +184,7 @@ const baoPham = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-pham/3",
+                    id: "bao-kim/book-reader",
                 },
                 {
                     name: `MEDICAL IMAGE PROCESSING OBJECT DETECTION`,
@@ -202,25 +193,25 @@ const baoPham = {
                     date: new Date(2021, 8),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-pham/4",
+                    id: "bao-kim/mip",
                 },
                 {
                     name: "RESTRICTED INFO",
                     tags: ["JENKINS", "AZURE", "AEM"],
                     isYearHidden: true,
                     date: new Date(2021, 4),
-                    company: "ELCA",
+                    company: "NETCOMPANY",
                     role: "DevOps",
-                    id: "bao-pham/sample",
+                    id: "bao-kim/nc-devops",
                 },
                 {
                     name: "RESTRICTED INFO",
                     tags: ["JAVA", "VUEJS", "AEM"],
                     isYearHidden: true,
                     date: new Date(2021, 8),
-                    company: "ELCA",
+                    company: "NETCOMPANY",
                     role: "developer",
-                    id: "bao-pham/sample",
+                    id: "bao-kim/nc-dev",
                 },
                 {
                     name: "CV VIP PRO (THIS.OBJECT)",
@@ -229,11 +220,10 @@ const baoPham = {
                     date: new Date(2021, 9),
                     company: "Freelance",
                     role: "developer, PRODUCT OWNER",
-                    id: "bao-pham/sample",
+                    id: "bao-kim/cv-vip",
                 },
             ],
         },
-
         {
             timelineTitle: "ACTIVITIES",
             timelineStartYear: "2017",
@@ -246,7 +236,7 @@ const baoPham = {
                     date: new Date(2017, 8),
                     company: "PERSONAL",
                     role: "PRESENTOR",
-                    id: "bao-pham/sample",
+                    id: "bao-kim/pitch-future-idea",
                 },
                 {
                     name: "STARTUP BATTLE IDEA",
@@ -255,7 +245,7 @@ const baoPham = {
                     date: new Date(2020, 1),
                     company: "TEAM",
                     role: "TECHNOLOGY CONSULTANT",
-                    id: "bao-pham/sample",
+                    id: "bao-kim/startup-idea",
                 },
                 {
                     name: "DAAD SCHOLARSHIP",
@@ -264,11 +254,10 @@ const baoPham = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "STUDENT",
-                    id: "bao-pham/sample",
+                    id: "bao-kim/daad",
                 },
             ],
         },
     ],
 };
-
-export { baoPham as user };
+export { baoKim as user };
