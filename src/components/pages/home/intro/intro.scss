@@ -15,6 +15,31 @@
         margin-bottom: 30px;
         font-weight: 500;
     }
+    &__cv-btn {
+        text-decoration: none;
+    }
+    &__cv-text {
+        margin: 0 0;
+        margin-right: 10px;
+    }
+    .btn {
+        font-size: inherit;
+    }
+    .btn-outline-primary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-color: $primary-color;
+        background-color: $primary-color;
+        &:hover {
+            border-color: #8242bd;
+            background-color: #8242bd;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
 
     &__character {
         &-avatar {

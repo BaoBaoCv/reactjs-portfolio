@@ -1,5 +1,7 @@
 import BaoPhamDecor from "@/mock/bao-pham/images/intro-decoration.png";
 import BaoKimDecor from "@/mock/bao-kim/images/intro-decoration.png";
+import BaoPhamCv from "@/mock/bao-pham/files/CV.pdf";
+import BaoKimCv from "@/mock/bao-kim/files/CV.pdf";
 
 const baoKim = {
     headerTitle: "bao_dkim/portfolio",
@@ -11,6 +13,7 @@ const baoKim = {
         dangkimbao1999@gmail.com -
         0933359290`,
     introDecoration: BaoKimDecor,
+    cvFile: BaoKimCv,
     linkedInUrl: "https://www.linkedin.com/in/bao-dang-kim-25a612184/",
     facebookUrl: "https://www.facebook.com/bao.dangkim1999/",
     githubUrl: "https://www.instagram.com/dangkimbao1999/",
@@ -83,7 +86,7 @@ const baoKim = {
                     company: "NETCOMPANY",
                     role: "developer",
                     id: "bao-kim/sample",
-                    useModal: true
+                    useModal: true,
                 },
                 {
                     name: "CV VIP PRO (THIS.OBJECT)",
@@ -144,6 +147,7 @@ const baoPham = {
         pambao@gmail.com -
         0123456789`,
     introDecoration: BaoPhamDecor,
+    cvFile: BaoPhamCv,
     linkedInUrl: "https://www.linkedin.com/in/bao-pham-394284185/",
     facebookUrl: "https://www.facebook.com/giabao.pham.92167/",
     githubUrl: "https://github.com/Pambao",
@@ -162,7 +166,7 @@ const baoPham = {
                     company: "VGU CL",
                     role: "developer",
                     id: "bao-pham/sample-modal",
-                    useModal: true
+                    useModal: true,
                 },
                 {
                     name: "Bike booking application",

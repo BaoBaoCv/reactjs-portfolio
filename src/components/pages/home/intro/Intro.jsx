@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
-import "./intro.scss";
-import { Col, Container, Row } from "react-bootstrap";
-import StatementCard from "./statement-card/StatementCard";
-import arrow from "@/assets/images/Arrow.svg";
-import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
+
 import RedYellowGreen from "@/components/pages/home/intro/RedYellowGreen";
+import SocialMedia from "@/components/pages/home/intro/social-media/SocialMedia";
+import StatementCard from "./statement-card/StatementCard";
+import DescriptionCard from "@/components/commons/description-card/DescriptionCard";
+import arrow from "@/assets/images/Arrow.svg";
 import { CHARACTER_IMAGES, getRndInteger } from "@/constants";
+import "./intro.scss";
 
 const box = {
     hidden: {
@@ -106,6 +109,21 @@ const Intro = ({ user }) => {
                                 description={user.introSubStatement}
                             />
                         </motion.div>
+                        <a
+                            className="intro__card intro__cv-btn"
+                            href={user.cvFile}
+                            target="_blank"
+                        >
+                            <Button variant="outline-primary">
+                                <p className="intro__cv-text">Download my CV</p>
+                                <FontAwesomeIcon
+                                    icon={faFileAlt}
+                                    className="fa-2x"
+                                    color="white"
+                                />
+                            </Button>
+                        </a>
+
                         <SocialMedia />
                     </div>
                 </Col>
