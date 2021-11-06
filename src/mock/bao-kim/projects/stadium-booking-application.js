@@ -28,7 +28,7 @@ export default {
         },
         {
             component: "ImageWithTitle",
-            src1: `https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.theconversation.com%2Ffiles%2F71773%2Foriginal%2Fimage-20150211-25679-rdtqd.JPG%3Fixlib%3Drb-1.1.0%26q%3D45%26auto%3Dformat%26w%3D1200%26h%3D1200.0%26fit%3Dcrop&imgrefurl=https%3A%2F%2Ftheconversation.com%2Fapes-make-irrational-economic-decisions-that-includes-you-37491&tbnid=-HR4o7Gz3FPsNM&vet=12ahUKEwjVgumyt73zAhUIspQKHdvjDC8QMygBegQIARB3..i&docid=DqyiGDXS0thKvM&w=1200&h=1200&q=ape&client=firefox-b-d&ved=2ahUKEwjVgumyt73zAhUIspQKHdvjDC8QMygBegQIARB3`,
+            src1: `https://images.theconversation.com/files/71773/original/image-20150211-25679-rdtqd.JPG?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop`,
             description1: "My team name was APE :D",
         },
     ],

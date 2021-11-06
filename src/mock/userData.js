@@ -49,7 +49,7 @@ const baoKim = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "developer",
-                    id: "bao-kim/3",
+                    id: "bao-kim/stadium-booking-application",
                 },
                 {
                     name: `MEDICAL IMAGE PROCESSING OBJECT DETECTION`,
@@ -67,7 +67,7 @@ const baoKim = {
                     date: new Date(2021, 4),
                     company: "NETCOMPANY",
                     role: "DevOps",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/nc-devops",
                 },
                 {
                     name: "RESTRICTED INFO",
@@ -76,8 +76,7 @@ const baoKim = {
                     date: new Date(2021, 8),
                     company: "NETCOMPANY",
                     role: "developer",
-                    id: "bao-kim/sample",
-                    useModal: true,
+                    id: "bao-kim/nc-dev",
                 },
                 {
                     name: "CV VIP PRO (THIS.OBJECT)",
@@ -86,7 +85,7 @@ const baoKim = {
                     date: new Date(2021, 9),
                     company: "Freelance",
                     role: "developer, PRODUCT OWNER",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/cv-vip",
                 },
             ],
         },
@@ -103,7 +102,8 @@ const baoKim = {
                     date: new Date(2017, 8),
                     company: "PERSONAL",
                     role: "PRESENTOR",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/pitch-future-idea",
+                    useModal: true
                 },
                 {
                     name: "STARTUP BATTLE IDEA",
@@ -112,7 +112,7 @@ const baoKim = {
                     date: new Date(2020, 1),
                     company: "TEAM",
                     role: "TECHNOLOGY CONSULTANT",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/startup-idea",
                 },
                 {
                     name: "DAAD SCHOLARSHIP",
@@ -121,7 +121,7 @@ const baoKim = {
                     date: new Date(2020, 9),
                     company: "VGU",
                     role: "STUDENT",
-                    id: "bao-kim/sample",
+                    id: "bao-kim/daad",
                 },
             ],
         },
@@ -237,6 +237,7 @@ const baoPham = {
                     company: "PERSONAL",
                     role: "PRESENTOR",
                     id: "bao-kim/pitch-future-idea",
+                    useModal: true
                 },
                 {
                     name: "STARTUP BATTLE IDEA",

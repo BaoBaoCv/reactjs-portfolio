@@ -36,15 +36,12 @@ const Popup = ({ location }) => {
                 <div className="close-btn">
                     <button onClick={back}>x</button>
                 </div>
-                <div className="title">
-                    <h2>placeholder for header if any</h2>
-                </div>
                 <div className="body">
                     {projectDetail.contents.map((component) => {
                         if (component.component === "ProjectDescription") {
                             return (
                                 <>
-                                    <h2>{component.title}</h2>
+                                    <h2 className="title">{component.title}</h2>
                                     <p>{component.col1}</p>
                                     <p>{component.col2}</p>
                                 </>
