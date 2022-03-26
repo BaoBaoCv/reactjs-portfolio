@@ -7,8 +7,8 @@ const baoKim = {
     headerTitle: "bao_dkim/portfolio",
 
     introName: "Dang Kim Bao - hello world",
-    introStatement: `currently, i am a web developer & programer who loves doing inspirational things with fresh minds. now i am working at Netcompany, but I always seek for a new chance to develop myself, and hoping that in oneday, I will be able to do that I love the most: Do creative and be inspired. 
-        My main tech stack: Reactjs, Nodejs, Java, Spring, but I am always willing to learn new things `,
+    introStatement: `currently, i am a web developer & programer who loves doing inspirational, and creative things with fresh minds. now i am working at Cong troi NFT as a fullstack developer on a Blockchain project. 
+        My main tech stack: Reactjs, Java, Spring, but I am always willing to learn new things `,
     introSubStatement: `Ho Chi Minh - Vietnam
         dangkimbao1999@gmail.com
         0933359290`,
@@ -87,6 +87,15 @@ const baoKim = {
                     role: "developer, PRODUCT OWNER",
                     id: "bao-kim/cv-vip",
                 },
+                {
+                    name:"Cong Troi NFT",
+                    tags: ["REACTJS","NODEJS", "KARDIACHAIN"],
+                    isYearHidden: false,
+                    date: new Date(2022,1),
+                    company:"Cong Troi NFT",
+                    role: "Developer",
+                    id:"bao-kim/congtroi",
+                }
             ],
         },
 
