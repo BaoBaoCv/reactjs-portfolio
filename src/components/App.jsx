@@ -6,6 +6,7 @@ import Header from "@/components/commons/header/Header";
 import GradientBg from "./commons/gradient-bg/GradientBg";
 import Footer from "./commons/footer/Footer";
 import Popup from "@/components/pages/project-detail/popup/Popup";
+import HeartRate from "@/components/pages/heart-rate/HeartRate";
 import { useLocation } from "react-router";
 import "@/components/app.scss";
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
                         component={route.component}
                     />
                 ))}
+                <Route path={"/my-heart-rate"} component={HeartRate} />
             </Switch>
             {background && <Route path="/modal/:id" children={<Popup />} />}
             <GradientBg />
