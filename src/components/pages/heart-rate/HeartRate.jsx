@@ -15,8 +15,8 @@ const HeartRate = () => {
     ) : (
         <div className="home">
             <ImageWithTitle src1={HeartImg}/>
-            <ImageWithTitle src1={Mono} style={{height: '20vh'}}/>
-            <p style={{fontSize: '32px'}}>{userData}</p>
+            <img src={Mono} style={{height: '15rem',  marginTop: '1rem'}}/>
+            <h1 style={{fontSize: '32px'}}>{userData}</h1>
         </div>
     );
 };

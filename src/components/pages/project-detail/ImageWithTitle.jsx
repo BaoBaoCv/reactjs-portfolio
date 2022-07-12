@@ -7,11 +7,10 @@ const ImageWithTitle = ({
     description2,
     src1,
     src2,
-    style,
 }) => {
     return (
         <div className="project-detail__images project-detail__row">
-            <div className="project-detail__images-box" style={{...style}}>
+            <div className="project-detail__images-box">
                 <img src={src1} />
                 <p>{description1}</p>
             </div>
