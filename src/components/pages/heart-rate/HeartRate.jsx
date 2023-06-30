@@ -8,7 +8,7 @@ import Mono from './img/monophy.gif';
 const HeartRate = () => {
     const [userData, setUserData] = useState(null);
     useEffect(() => {
-        setUserData(80);
+        setUserData(100);
     }, []);
     return !userData ? (
         <PageSpinner />
@@ -17,6 +17,7 @@ const HeartRate = () => {
             <ImageWithTitle src1={HeartImg}/>
             <img src={Mono} style={{height: '15rem',  marginTop: '1rem'}}/>
             <h1 style={{fontSize: '32px'}}>{userData}</h1>
+            <h1 style={{textAlign: 'center'}}>Iu Dung Nhi ❤️</h1>
         </div>
     );
 };
