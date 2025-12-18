@@ -46,7 +46,7 @@ const routes = [
         component: Alphabet,
         icon: projectLinkIcon,
         detail: "ALPHABET WISDOM CARDS",
-        isShowOnNavBar: true,
+        isShowOnNavBar: false,
     },
 ];
 
