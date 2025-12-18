@@ -3,9 +3,11 @@ import Home from "@/components/pages/home/Home";
 import ProjectDetail from "@/components/pages/project-detail/ProjectDetail";
 import Profile from "@/components/pages/profile/Profile";
 import Motivation from "@/components/pages/motivation/Motivation";
+import Alphabet from "@/components/pages/alphabet/Alphabet";
 import homeIcon from "@/assets/images/home-icon.png";
 import motivationIcon from "@/assets/images/project-list-icon.png";
 import profileIcon from "@/assets/images/profile-icon.png";
+import projectLinkIcon from "@/assets/images/project-link-icon.png";
 
 const routes = [
     {
@@ -36,6 +38,14 @@ const routes = [
         component: Profile,
         icon: profileIcon,
         detail: "ABOUT, RESUME & INFO",
+        isShowOnNavBar: true,
+    },
+    {
+        name: PAGE_NAMES.ALPHABET,
+        path: ROUTE_PATHS[PAGE_NAMES.ALPHABET],
+        component: Alphabet,
+        icon: projectLinkIcon,
+        detail: "ALPHABET WISDOM CARDS",
         isShowOnNavBar: true,
     },
 ];

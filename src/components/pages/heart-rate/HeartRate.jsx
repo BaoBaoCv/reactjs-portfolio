@@ -17,7 +17,7 @@ const HeartRate = () => {
             <ImageWithTitle src1={HeartImg}/>
             <img src={Mono} style={{height: '15rem',  marginTop: '1rem'}}/>
             <h1 style={{fontSize: '32px'}}>{userData}</h1>
-            <h1 style={{textAlign: 'center'}}>Iu Dung Nhi ❤️</h1>
+            <h1 style={{textAlign: 'center'}}>Undefined ❤️</h1>
         </div>
     );
 };

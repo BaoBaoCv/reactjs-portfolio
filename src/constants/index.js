@@ -18,6 +18,7 @@ const PAGE_NAMES = {
     PROJECT_DETAIL: "projectDetail",
     MOTIVATION: "motivation",
     PROFILE: "profile",
+    ALPHABET: "activities",
 };
 
 const ROUTE_PATHS = {
@@ -25,6 +26,7 @@ const ROUTE_PATHS = {
     [PAGE_NAMES.PROJECT_DETAIL]: "/projectDetail",
     [PAGE_NAMES.MOTIVATION]: "/motivation",
     [PAGE_NAMES.PROFILE]: "/profile",
+    [PAGE_NAMES.ALPHABET]: "/activities",
 };
 
 const PIXEL_ARTS = [pixelArt1, pixelArt2, pixelArt3, pixelArt4, pixelArt5, pixelArt6, pixelArt7, pixelArt8, pixelArt9, pixelArt10, pixelArt11]

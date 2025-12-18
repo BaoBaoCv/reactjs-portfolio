@@ -1,0 +1,132 @@
+{
+  "A": {
+    "title": "Aquarium",
+    "description": "Visit the aquarium and watch the fish swim around",
+    "quote": "The biggest adventure you can take is to live the life of your dreams."
+  },
+  "B": {
+    "title": "Bowling",
+    "description": "Bowling is a fun way to spend time with your partner. It's a great way to bond and have fun.",
+    "quote": "The difference between the impossible and the possible lies in a person's determination."
+  },
+  "C": {
+    "title": "Cinema",
+    "description": "Watch a movie with your partner. It's a great way to bond and have fun.",
+    "quote": "The only way to do great work is to love what you do."
+  },
+  "D": {
+    "title": "Dance",
+    "description": "Have a romantic dinner with your partner. It's a great way to bond and have fun.",
+    "quote": "The only way to do great work is to love what you do."
+  },
+  "E": {
+    "title": "Escape room",
+    "description": "Escape room is a fun way to spend time with your partner. It's a great way to bond and have fun.",
+    "quote": "The only way to do great work is to love what you do."
+  },
+  "H": {
+    "title": "Hiking",
+    "description": "Hiking is a fun way to spend time with your partner. It's a great way to bond and have fun.",
+    "quote": "The only way to do great work is to love what you do."
+  },
+  "F": {
+    "title": "Food tour",
+    "description": "Food tour is a fun way to spend time with your partner. It's a great way to bond and have fun.",
+    "quote": "The only way to do great work is to love what you do."
+  },
+  "G": {
+    "title": "Go-karting",
+    "description": "Golf is a fun way to spend time with your partner. It's a great way to bond and have fun.",
+    "quote": "The only way to do great work is to love what you do."
+  },
+  "I": {
+    "title": "Ice-skating",
+    "description": "The art of creating something new and valuable. Innovation distinguishes between a leader and a follower.",
+    "quote": "Innovation distinguishes between a leader and a follower."
+  },
+  "J": {
+    "title": "Jazz music",
+    "description": "The feeling of happiness and contentment. Joy is found in the simple moments of life.",
+    "quote": "Joy is the simplest form of gratitude."
+  },
+  "K": {
+    "title": "Karaoke",
+    "description": "The quality of being friendly and considerate. A single act of kindness creates endless ripples.",
+    "quote": "Kindness is a language which the deaf can hear and the blind can see."
+  },
+  "L": {
+    "title": "Live music",
+    "description": "The most powerful force in the universe. Love transcends all boundaries and heals all wounds.",
+    "quote": "Love is not just a feeling, it's an action."
+  },
+  "M": {
+    "title": "Museum",
+    "description": "The practice of being present in the moment. Mindfulness brings peace to the restless mind.",
+    "quote": "Mindfulness is the awareness that arises through paying attention, on purpose."
+  },
+  "N": {
+    "title": "Night market",
+    "description": "The beauty and wisdom of the natural world. In nature, we find our true selves.",
+    "quote": "In every walk with nature, one receives far more than he seeks."
+  },
+  "O": {
+    "title": "Opera",
+    "description": "The hopeful outlook that sees possibilities in every situation. Optimism is the faith that leads to achievement.",
+    "quote": "Optimism is the one quality more associated with success and happiness than any other."
+  },
+  "P": {
+    "title": "Pottery class",
+    "description": "The intense enthusiasm that drives us forward. Passion is the fuel that powers our dreams.",
+    "quote": "Passion is energy. Feel the power that comes from focusing on what excites you."
+  },
+  "Q": {
+    "title": "Quiet dinner",
+    "description": "The journey of seeking knowledge and wisdom. Every great discovery begins with a question.",
+    "quote": "The quest for knowledge is never-ending."
+  },
+  "R": {
+    "title": "River cruise",
+    "description": "The ability to bounce back from adversity. Resilience is the foundation of strength.",
+    "quote": "Resilience is knowing that you are the only one that has the power and the responsibility to pick yourself up."
+  },
+  "S": {
+    "title": "Spa day",
+    "description": "The connection to something greater than ourselves. Spirituality nourishes the soul.",
+    "quote": "Spirituality is not religion, it's the recognition of the divine within and around us."
+  },
+  "T": {
+    "title": "Theater",
+    "description": "The process of profound change and growth. Transformation is the bridge between who we are and who we want to be.",
+    "quote": "Transformation is not a future event, it's a present activity."
+  },
+  "U": {
+    "title": "Underground Bar",
+    "description": "The power of togetherness and collaboration. United we stand, divided we fall.",
+    "quote": "Unity is strength... when there is teamwork and collaboration, wonderful things can be achieved."
+  },
+  "V": {
+    "title": "Vintage Shopping",
+    "description": "The ability to see what others cannot. Vision creates the future we desire.",
+    "quote": "Vision is the art of seeing what is invisible to others."
+  },
+  "W": {
+    "title": "Workshop together",
+    "description": "The deep understanding that comes from experience. Wisdom is the right use of knowledge.",
+    "quote": "Wisdom is not a product of schooling but of the lifelong attempt to acquire it."
+  },
+  "X": {
+    "title": "XBox night",
+    "description": "The love and appreciation of foreign cultures and peoples. Xenophilia celebrates diversity.",
+    "quote": "The world is a book, and those who do not travel read only one page."
+  },
+  "Y": {
+    "title": "YOLO đi :D",
+    "description": "The eternal spirit of wonder and curiosity. Youthfulness is a state of mind, not age.",
+    "quote": "Youthfulness is about how you live, not when you were born."
+  },
+  "Z": {
+    "title": "Zoo",
+    "description": "The enthusiastic devotion to a cause. Zeal turns ordinary actions into extraordinary achievements.",
+    "quote": "Zeal is the fire that burns within us to accomplish great things."
+  }
+}
